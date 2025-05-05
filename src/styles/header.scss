@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    background-color: var(--blue);
+}
+.header__search{
+    position: relative;
+}
+
+// .form-control{
+//     position: relative;
+
+// }
+.header__icon {
+    color: #fff;
+    width: 30px;
+    height: 30px;
+}
+.header__icon--search {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    color: var(--blue);
+}
