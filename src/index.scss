@@ -1,0 +1,18 @@
+@import "./styles/reset.scss";
+
+:root {
+ 
+    --blue: #5378f1;
+    
+  .btn-primary{
+        background-color: var(--blue);
+        border: 1px solid #fff;
+        &:hover {
+            border: 1px solid #fff;
+        }
+    }  
+
+}
+
+
+
