@@ -1,25 +1,49 @@
+export type Features = {
+    [key: string]: string;
+};
+
+export type Feat = {
+    [key: string]: string[];
+};
 
 export type Product = {
     id: number;
     categoryId: number;
     name: string;
-    features: {
-        [feature: string]: string
-    };
+    features: Features;
     price: number;
-    src: string   
-}
+    src: string;
+    quantity?: number;
+};
 export type Category = {
     id: number;
     name: string;
-    src: string
-}
+    src: string;
+};
 
 export type ProductState = {
-    productList: Product[],
-    categoryList: Category[]
-    // ,
-    // status: string | null,
-    // error: string | null
+    productList: Product[];
+    categoryList: Category[];
+    filteredByCategory: Product[];
+    filteredByParams: Product[] | null;
+    foundProducts: Product[];
+    searchList: Array<Product[]>;
+    maxPrice: number;
+    cart: Product[];
+};
+
+export type SearchParams = {
+    min: number;
+    max: number;
+    features: {} | Feat;
+};
+
+export interface Iprops {
+    title: string;
+    listId: number[];
 }
 
+export type Data = {
+    products: Product[];
+    categories: Category[];
+};
