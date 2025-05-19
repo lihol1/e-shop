@@ -1,0 +1,74 @@
+.sidebar {
+    padding: 40px 20px;
+    width: 35%;
+    background-color: #e4e0e0;
+
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__clear-btn {
+        color: var(--orange);
+        font-size: 14px;
+    }
+
+    &__search {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    &__price-block {
+        margin-bottom: 40px;
+    }
+    &__price-title {
+        font-size: 20px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    &__currency {
+        margin-left: 5px;
+        font-size: 18px;
+    }
+    &__inputs-holder {
+        margin-bottom: 30px;
+    }
+
+    &__price-input {
+        padding: 0 5px;
+        width: 45%;
+        border: none;
+        border-radius: 5px;
+    }
+
+    &__range input {
+        width: 100%;
+    }
+
+    &__acc-header {
+        background-color: #e4e0e0;
+    }
+    &__acc-body {
+        text-align: left;
+    }
+
+    &__feat {
+        margin-left: 10px;
+    }
+
+    .MuiSlider-root {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        color: var(--orange);
+        & .MuiSlider-thumb {
+            width: 16px;
+            height: 16px;
+        }
+        & .MuiSlider-valueLabel {
+            font-size: 14px;
+        }
+    }
+}

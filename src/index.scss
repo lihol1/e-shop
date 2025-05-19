@@ -1,18 +1,33 @@
 @import "./styles/reset.scss";
 
 :root {
- 
     --blue: #5378f1;
-    
-  .btn-primary{
+    --orange: #ee8732;
+    --dark-orange: #cf6f21;
+
+    .btn-blue {
         background-color: var(--blue);
         border: 1px solid #fff;
+        font-size: 20px;
         &:hover {
             border: 1px solid #fff;
         }
-    }  
-
+    }
 }
 
+body {
+    font-size: 18px;
+    line-height: 1.1;
+}
 
-
+.page__main {
+    min-height: 700px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    text-align: center;
+}
+.page__wrapper {
+    display: flex;
+    width: 100%;
+}
