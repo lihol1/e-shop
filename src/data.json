@@ -5,9 +5,9 @@
             "categoryId": 1,
             "name": "Смартфон Samsung Galaxy Z Fold 6 12/1Tb, SM-F956B, синий",
             "features": {
-                "Размер экрана": "7.6\"",
-                "Разрешение экрана": "2160x1856",
-                "Встроенная память": "1024 ГБ"
+                "screen size": "7.6\"",
+                "screen resolution": "2160x1856",
+                "built-in memory": "1024 ГБ"
             },
             "price": 189990,
             "src": "https://cdn.citilink.ru/NAwj9b6UzrNFyzKMUkARXgQLKrl7JZl_yPf4Hzea0EY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/96b3420f-d861-4a63-a0e1-42d19a7f352e.jpg"
@@ -17,9 +17,9 @@
             "categoryId": 1,
             "name": "Смартфон Samsung Galaxy Z Fold 6 12/512Gb, SM-F956B, розовый",
             "features": {
-                "Размер экрана": "7.6\"",
-                "Разрешение экрана": "2160x1856",
-                "Встроенная память": "512 ГБ"
+                "screen size": "7.6\"",
+                "screen resolution": "2160x1856",
+                "built-in memory": "512 ГБ"
             },
             "price": 168990,
             "src": "https://cdn.citilink.ru/pvsc_xkWBrVqjiu8_0lDxhFP3fOR4ekrJxOGeH0BxMA/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/f362189c-c45c-4caa-b0bf-b1988837d8b7.jpg"
@@ -29,9 +29,9 @@
             "categoryId": 1,
             "name": "Смартфон Apple iPhone 16 Pro 512Gb, A3292, белый титан",
             "features": {
-                "Размер экрана": "6.3\"",
-                "Разрешение экрана": "2622x1206",
-                "Встроенная память": "512 ГБ"
+                "screen size": "6.3\"",
+                "screen resolution": "2622x1206",
+                "built-in memory": "512 ГБ"
             },
             "price": 164990,
             "src": "https://cdn.citilink.ru/WPGvEInBOklHffYnuAFbQEj5LDQ69ObYZZ3uaU6mgag/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/e0b6c169-08ab-4b3b-93b8-d7dc310eff59.jpg"
@@ -41,9 +41,9 @@
             "categoryId": 1,
             "name": "Смартфон Samsung Galaxy S24 Ultra 12/1Tb, желтый титан",
             "features": {
-                "Размер экрана": "6.8\"",
-                "Разрешение экрана": "3120x1440",
-                "Встроенная память": "1024 ГБ"
+                "screen size": "6.8\"",
+                "screen resolution": "3120x1440",
+                "built-in memory": "1024 ГБ"
             },
             "price": 152990,
             "src": "https://cdn.citilink.ru/cW63WmzXxFV5ypixC7IQyJgOk76YeSi3P61pXoMsQDs/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/43366bd2-ce1d-4780-9d46-5153b6b1f300.jpg"
@@ -53,9 +53,9 @@
             "categoryId": 1,
             "name": "Смартфон INFINIX Hot 50 8/256Gb, X6882, зеленый",
             "features": {
-                "Размер экрана": "6.78\"",
-                "Разрешение экрана": "2460x1080",
-                "Встроенная память": "256 ГБ"
+                "screen size": "6.78\"",
+                "screen resolution": "2460x1080",
+                "built-in memory": "256 ГБ"
             },
             "price": 15820,
             "src": "https://cdn.citilink.ru/vC9drABjtQpsRxxv0JNpOE1vT2SHMFIYoW04y5taf7M/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0062ced1-8139-4a15-b210-6057c7d70a60.jpg"
@@ -65,9 +65,9 @@
             "categoryId": 2,
             "name": "Ноутбук Dell XPS 14 9440 14.5\", 2024, WVA, Intel Core Ultra 7 155H 1.4ГГц, 16-ядерный, 16ГБ LPDDR5x, 512ГБ SSD, Intel Arc, Windows 11 Pro, серебристый [9440-7652]",
             "features": {
-                "Размер экрана": "14.5\"",
-                "Разрешение экрана": "1920х1200",
-                "Оперативная память": "LPDDR5x"
+                "screen size": "14.5\"",
+                "screen resolution": "1920х1200",
+                "ram memory": "LPDDR5x"
             },
             "price": 269990,
             "src": "https://cdn.citilink.ru/6j84rvoxR2vC89v8KcNTMP3a6zdIWWzyueFMluFi0lE/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/f642473d-2ff7-431b-9b72-7c3ff32eb21c.jpg"
@@ -77,9 +77,9 @@
             "categoryId": 2,
             "name": "Ноутбук игровой ASUS ProArt PX13 HN7306WV-LX014X 13.3\", 2024, трансформер, OLED, AMD Ryzen AI 9 HX 370 2ГГц, 12-ядерный, 32ГБ LPDDR5x, 1ТБ SSD, NVIDIA GeForce RTX 4060 для ноутбуков - 8 ГБ, Windows 11 Pro, черный [90nb14l1-m00180]",
             "features": {
-                "Размер экрана": "13.3\"",
-                "Разрешение экрана": "2880х1800",
-                "Оперативная память": "LPDDR5x"
+                "screen size": "13.3\"",
+                "screen resolution": "2880х1800",
+                "ram memory": "LPDDR5x"
             },
             "price": 232990,
             "src": "https://cdn.citilink.ru/H6sitpsBH2Et5Cj8_Ao9YLIj6LmHvDHcnIgMXLAWQvk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/4ae65909-a653-4e95-b2d0-d74cd6be1a50.jpg"
@@ -89,9 +89,9 @@
             "categoryId": 2,
             "name": "Ноутбук игровой Lenovo Yoga Pro 9 16IMH9 16\", 2024, IPS, Intel Core Ultra 7 155H 1.4ГГц, 16-ядерный, 16ГБ LPDDR5x, 1ТБ SSD, NVIDIA GeForce RTX 4060 для ноутбуков - 8 ГБ, Windows 11 Home, серый [83dn006aru]",
             "features": {
-                "Размер экрана": "16\"",
-                "Разрешение экрана": "3200х2000",
-                "Оперативная память": "LPDDR5x"
+                "screen size": "16\"",
+                "screen resolution": "3200х2000",
+                "ram memory": "LPDDR5x"
             },
             "price": 226990,
             "src": "https://cdn.citilink.ru/2e77h8FoF53gw1NmBmpU-0Tu1X9bavprTn6NbUXBC8g/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/62a42a12-cb12-46c8-a1a1-7ac7a6621ef5.jpg"
@@ -101,9 +101,9 @@
             "categoryId": 2,
             "name": "Ноутбук ASUS Expertbook B3 B3404CMA-Q50430 14\", IPS, Intel Core Ultra 5 125U 1.3ГГц, 12-ядерный, 16ГБ DDR5, 512ГБ SSD, Intel Graphics, без операционной системы, черный [90nx0711-m00h10]",
             "features": {
-                "Размер экрана": "14\"",
-                "Разрешение экрана": "1920х1200",
-                "Оперативная память": "DDR5"
+                "screen size": "14\"",
+                "screen resolution": "1920х1200",
+                "ram memory": "DDR5"
             },
             "price": 78990,
             "src": "https://cdn.citilink.ru/M97WsGeELpLUqusMTiJDDOEGDgp0wdV52ihkaXEacAc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9ff4f251-977d-4d21-8336-6c050bdfa7c2.jpg"
@@ -113,9 +113,9 @@
             "categoryId": 2,
             "name": "Ноутбук Lenovo IdeaPad Slim 3 15ABR8 15.6\", 2023, TN, AMD Ryzen 7 7730U 2ГГц, 8-ядерный, 16ГБ DDR4, 1ТБ SSD, AMD Radeon Graphics, без операционной системы, серый [82xm000ark]",
             "features": {
-                "Размер экрана": "15.6\"",
-                "Разрешение экрана": "1920х1080",
-                "Оперативная память": "DDR4"
+                "screen size": "15.6\"",
+                "screen resolution": "1920х1080",
+                "ram memory": "DDR4"
             },
             "price": 53990,
             "src": "https://cdn.citilink.ru/1r7dijTDgoKb99PPvzS8eHlGV9FD0FGO2fsziA8Mc4g/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/e9eee437-6ceb-40bf-ba28-eae68bc895c5.jpg"
@@ -125,9 +125,9 @@
             "categoryId": 3,
             "name": "32\" Монитор MSI Summit MS321UP, 3840x2160, IPS, 2хHDMI, 1хDP, черный [9s6-3da98t-028]",
             "features": {
-                "Размер экрана": "32\"",
-                "Разрешение экрана": "3840x2160",
-                "Контрастность": "статическая 1000:1"
+                "screen size": "32\"",
+                "screen resolution": "3840x2160",
+                "contrast": "статическая 1000:1"
             },
             "price": 72500,
             "src": "https://cdn.citilink.ru/I_SzxQBUeanAvY4huu7YlTFQ5mWTdkHQd1_M0joJTn8/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/68136a8d-b1c5-465a-83a2-55b1079050fb.jpg"
@@ -137,9 +137,9 @@
             "categoryId": 3,
             "name": "27\" Монитор Dell U2723QE, 3840x2160, IPS, 1хHDMI, 2хDP, черный и серебристый [210-bcxk]",
             "features": {
-                "Размер экрана": "27\"",
-                "Разрешение экрана": "3840x2160",
-                "Контрастность": "2000:1"
+                "screen size": "27\"",
+                "screen resolution": "3840x2160",
+                "contrast": "2000:1"
             },
             "price": 67000,
             "src": "https://cdn.citilink.ru/esEfeXLZ0Ht5Wd0Tsk2QzjzX3WA828nMVGxRrqZLx6o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/5cbdd800-5bee-40fd-a21b-a9290da1aa99.jpg"
@@ -149,9 +149,9 @@
             "categoryId": 3,
             "name": "31.5\" Монитор LG UltraGear 32GR93U-B, 3840x2160, IPS, 144Гц, 2хHDMI, 1хDP, черный [32gr93u-b.aruz]",
             "features": {
-                "Размер экрана": "31.5\"",
-                "Разрешение экрана": "3840x2160",
-                "Контрастность": "статическая 1000:1"
+                "screen size": "31.5\"",
+                "screen resolution": "3840x2160",
+                "contrast": "статическая 1000:1"
             },
             "price": 63690,
             "src": "https://cdn.citilink.ru/VirBHSs3AVauMWy3FxSUVJX2jYHV-N66qo7lJwds7yk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/4929654a-662d-493a-b952-b0d3959009b8.jpg"
@@ -161,9 +161,9 @@
             "categoryId": 3,
             "name": "27\" Монитор Dell P2724DEB, 2560x1440, IPS, 1хHDMI, 1хDP, черный и серебристый",
             "features": {
-                "Размер экрана": "27\"",
-                "Разрешение экрана": "2560x1440",
-                "Контрастность": "статическая 1000:1"
+                "screen size": "27\"",
+                "screen resolution": "2560x1440",
+                "contrast": "статическая 1000:1"
             },
             "price": 57580,
             "src": "https://cdn.citilink.ru/D3AbwHgrOwfthJwsKwTvFopq1wA0X3r0XRFtsDh6VuI/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ba77f15d-f78a-4e9b-b11c-c98377c27da3.jpg"
@@ -173,9 +173,9 @@
             "categoryId": 3,
             "name": "23.8\" Монитор Philips 242V8LA, 1920x1080, VA, 75Гц, 1хHDMI, 1хDP, черный [242v8la/00]",
             "features": {
-                "Размер экрана": "23.8\"",
-                "Разрешение экрана": "1920x1080",
-                "Контрастность": "статическая 3000:1"
+                "screen size": "23.8\"",
+                "screen resolution": "1920x1080",
+                "contrast": "статическая 3000:1"
             },
             "price": 11000,
             "src": "https://cdn.citilink.ru/oRuQI2d8Y0Z5Ca4FoMczpPtSqcj6jbUww2ALC3oF2UM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/8dfb549b-43ed-4049-9ef1-2c4145d9e443.jpg"
@@ -185,9 +185,9 @@
             "categoryId": 4,
             "name": "Проектор Cactus CS-PRO.03WT.Full HD-A, белый, Wi-Fi [cs-pro.03wt.wuxga-a]",
             "features": {
-                "Диагональ экрана": "49-250\"",
-                "Разрешение экрана": "1920x1080",
-                "Контраст": "2300:1"
+                "diagonal": "49-250\"",
+                "screen resolution": "1920x1080",
+                "contrast ratio": "2300:1"
             },
             "price": 21990,
             "src": "https://cdn.citilink.ru/Tjz6M0V600Gs0xP8vuVpLY1-B5_7fUfk3hEXHGf3kyc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/8da41035-6dec-4b93-9fe0-684e7e0fc603.jpg"
@@ -197,9 +197,9 @@
             "categoryId": 4,
             "name": "Проектор INFOCUS ScreenPlay SP224, белый",
             "features": {
-                "Диагональ экрана": "22.8-300\"",
-                "Разрешение экрана": "1024x768",
-                "Контраст": "20000:1"
+                "diagonal": "22.8-300\"",
+                "screen resolution": "1024x768",
+                "contrast ratio": "20000:1"
             },
             "price": 55650,
             "src": "https://cdn.citilink.ru/afs0Xm4N9kFCh5g2q4-I6DEqHq6hsM208TjnDoH-pDc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d17792c2-9f75-4545-92b2-956b1f3692fc.jpg"
@@ -209,9 +209,9 @@
             "categoryId": 4,
             "name": "Проектор Acer X1228H, черный [mr.jth11.001]",
             "features": {
-                "Диагональ экрана": "20-240\"",
-                "Разрешение экрана": "1024x768",
-                "Контраст": "30000:1"
+                "diagonal": "20-240\"",
+                "screen resolution": "1024x768",
+                "contrast ratio": "30000:1"
             },
             "price": 49500,
             "src": "https://cdn.citilink.ru/CHT_Bho3vTFUa_IoAUfSUzTfpLymC3YP602urhHBE8k/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/bbb962e1-2550-491c-8948-ab28c18c2157.jpg"
@@ -221,9 +221,9 @@
             "categoryId": 4,
             "name": "Проектор YABER K2s, черный, Wi-Fi [ybr_k2s]",
             "features": {
-                "Диагональ экрана": "40-120\"",
-                "Разрешение экрана": "1920x1080",
-                "Контраст": "30000:1"
+                "diagonal": "40-120\"",
+                "screen resolution": "1920x1080",
+                "contrast ratio": "30000:1"
             },
             "price": 39990,
             "src": "https://cdn.citilink.ru/WRQD0ff7vr1SbCxkpnzzkt3c6x5F2BuudwvxpaGsTvM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/3b0c87e8-1a7b-47ec-895f-3db02ed3bd33.jpg"
@@ -233,9 +233,9 @@
             "categoryId": 4,
             "name": "Проектор INFOCUS IN1014, белый",
             "features": {
-                "Диагональ экрана": "30-300\"",
-                "Разрешение экрана": "1024x768",
-                "Контраст": "30000:1"
+                "diagonal": "30-300\"",
+                "screen resolution": "1024x768",
+                "contrast ratio": "30000:1"
             },
             "price": 43900,
             "src": "https://cdn.citilink.ru/Kc2qdwCugBF3e3AtfpqTS1QimarWT5Oid6YGFANNUk8/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/15c1f14b-cd98-46cf-a8de-62d9950411f6.jpg"
@@ -245,9 +245,9 @@
             "categoryId": 5,
             "name": "75\" Телевизор Sony KD-75X80L, 4K Ultra HD, черный, СМАРТ ТВ, Google TV",
             "features": {
-                "Диагональ": "75\"",
-                "Разрешение экрана": "3840x2160",
-                "Частота обновления": "60 Гц"
+                "diagonal": "75\"",
+                "screen resolution": "3840x2160",
+                "refresh rate": "60 Гц"
             },
             "price": 219790,
             "src": "https://cdn.citilink.ru/uroD4gmcgkEWHNys2MAFBvw0xQ7oCNjzwRbGjObBJ2o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/01d81ca4-5e64-4edb-bf5e-b95ab3fcc108.jpg"
@@ -257,9 +257,9 @@
             "categoryId": 5,
             "name": "85\" Телевизор Hisense 85U7NQ, QLED, 4K Ultra HD, темно-серый, СМАРТ ТВ, Vidaa",
             "features": {
-                "Диагональ": "85\"",
-                "Разрешение экрана": "3840x2160",
-                "Частота обновления": "120 Гц"
+                "diagonal": "85\"",
+                "screen resolution": "3840x2160",
+                "refresh rate": "120 Гц"
             },
             "price": 229990,
             "src": "https://cdn.citilink.ru/zODxdcVQ1U1lelxdQOOB-UYtDMuB-9zaGmZFjITQCE0/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/53f7f519-253f-4bb8-a4e9-76c95e24ffa2.jpg"
@@ -269,9 +269,9 @@
             "categoryId": 5,
             "name": "55\" Телевизор Samsung QE55QN85DBUXRU, Neo QLED, 4K Ultra HD, черный графит, СМАРТ ТВ, Tizen OS",
             "features": {
-                "Диагональ": "55\"",
-                "Разрешение экрана": "3840x2160",
-                "Частота обновления": "120 Гц"
+                "diagonal": "55\"",
+                "screen resolution": "3840x2160",
+                "refresh rate": "120 Гц"
             },
             "price": 102490,
             "src": "https://cdn.citilink.ru/XPr0cjjwJqN-1woTVd8Fsyyhg40TpzrvG0q72Kus5yM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/07b0c4ea-9283-4061-bba3-c6bbaaa05231.jpg"
@@ -281,9 +281,9 @@
             "categoryId": 5,
             "name": "86\" Телевизор LG 86UT81006LA.ARUB, 4K Ultra HD, черный, СМАРТ ТВ, WebOS",
             "features": {
-                "Диагональ": "86\"",
-                "Разрешение экрана": "3840x2160",
-                "Частота обновления": "60 Гц"
+                "diagonal": "86\"",
+                "screen resolution": "3840x2160",
+                "refresh rate": "60 Гц"
             },
             "price": 155999,
             "src": "https://cdn.citilink.ru/hBj7kba2_5iuZmRaqjfY6npaDM1fwSjYUA_sDlLJkxk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b6c0892b-f745-40e4-894d-f42afc0b941c.jpg"
@@ -293,9 +293,9 @@
             "categoryId": 5,
             "name": "75\" Телевизор LG 75QNED80T6A.ARUG, QNED, 4K Ultra HD, черный титан, СМАРТ ТВ, WebOS",
             "features": {
-                "Диагональ": "75\"",
-                "Разрешение экрана": "3840x2160",
-                "Частота обновления": "60 Гц"
+                "diagonal": "75\"",
+                "screen resolution": "3840x2160",
+                "refresh rate": "60 Гц"
             },
             "price": 124990,
             "src": "https://cdn.citilink.ru/N3IMhfEhkvqbDIeq_ylA8dJ3zfHyfrJimH0lbhLFtv4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ab4109af-321a-4273-84e9-123e1fde49fc.jpg"
@@ -305,9 +305,9 @@
             "categoryId": 6,
             "name": "Музыкальный центр Sony SRS-XV900, 100Вт, Bluetooth, USB, черный",
             "features": {
-                "Cуммарная мощность": "100 Вт",
-                "Профили Bluetooth": "A2DP/AVRCP/SPP",
-                "Разъем USB": "есть"
+                "total power": "100 Вт",
+                "bluetooth profiles": "A2DP/AVRCP/SPP",
+                "usb socket": "есть"
             },
             "price": 106990,
             "src": "https://cdn.citilink.ru/8xWCznufvtrwiKD1khB3KNbEkcRjXePHZlFqMfVNW8o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/016dc672-8d25-4d74-ada7-1d31fc63f8e4.jpg"
@@ -317,9 +317,9 @@
             "categoryId": 6,
             "name": "Музыкальный центр LG XBOOM XL9T, 1000Вт, с караоке, Bluetooth, USB, черный, красный",
             "features": {
-                "Cуммарная мощность": "1000 Вт",
-                "Профили Bluetooth": "AAC/SBC",
-                "Разъем USB": "есть"
+                "total power": "1000 Вт",
+                "bluetooth profiles": "AAC/SBC",
+                "usb socket": "есть"
             },
             "price": 77990,
             "src": "https://cdn.citilink.ru/-iNmnNIKZImnT8322_f7BimyUi__PMKP9p5EnsiAZkY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/89c925fc-2bec-4b63-86a7-f7bde89279e8.jpg"
@@ -329,9 +329,9 @@
             "categoryId": 6,
             "name": "Музыкальный центр Sony MHC-V43D, с караоке, Bluetooth, FM, USB, CD, DVD, черный",
             "features": {
-                "Cуммарная мощность": "1000 Вт",
-                "Профили Bluetooth": "LDAC/AAC/A2DP(SINK)/AVRCP/SPP",
-                "Разъем USB": "есть"
+                "total power": "1000 Вт",
+                "bluetooth profiles": "LDAC/AAC/A2DP(SINK)/AVRCP/SPP",
+                "usb socket": "есть"
             },
             "price": 42990,
             "src": "https://cdn.citilink.ru/cWTVlXJ98boIx3DV2gh2n-wESmSYOZMIGy2I9ubzdYw/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/a9e6fce5-4825-4d93-a8a9-d32b2d0ce0c0.jpg"
@@ -341,9 +341,9 @@
             "categoryId": 6,
             "name": "Музыкальный центр Sony MHC-V43D, с караоке, Bluetooth, FM, USB, CD, DVD, черный",
             "features": {
-                "Cуммарная мощность": "160 Вт",
-                "Профили Bluetooth": "AAC/SBC",
-                "Разъем USB": "есть"
+                "total power": "160 Вт",
+                "bluetooth profiles": "AAC/SBC",
+                "usb socket": "есть"
             },
             "price": 44990,
             "src": "https://cdn.citilink.ru/QLgkzPe85VSVTVRBzR7fxU61wg2DZTyvAH1rZq8f8TU/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/77eebcbe-3568-4bde-a8c8-b0d70e3393db.jpg"
@@ -353,9 +353,9 @@
             "categoryId": 6,
             "name": "Музыкальный центр Sony MHC-V43D, с караоке, Bluetooth, FM, USB, CD, DVD, черный",
             "features": {
-                "Cуммарная мощность": "120 Вт",
-                "Профили Bluetooth": "AAC/SBC",
-                "Разъем USB": "есть"
+                "total power": "120 Вт",
+                "bluetooth profiles": "AAC/SBC",
+                "usb socket": "есть"
             },
             "price": 23520,
             "src": "https://cdn.citilink.ru/F-XORrUVy8yUi4EwqcaHWEv1AdCK73ZuR8QNXkZa4-A/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/c3166f5f-b73e-4aa0-8fae-4bb560569425.jpg"
@@ -365,9 +365,9 @@
             "categoryId": 7,
             "name": "Медиаплеер Xiaomi TV Box S, 8ГБ [pfj4167ru]",
             "features": {
-                "Максимальное разрешение": "3840x2160",
-                "Тип процессора": "ARM Cortex A55",
-                "Встроенная flash память": "64 ГБ"
+                "max resolution": "3840x2160",
+                "processor type": "ARM Cortex A55",
+                "flash memory": "64 ГБ"
             },
             "price": 5990,
             "src": "https://cdn.citilink.ru/VS7TL_K0htl2TGJPzBb1JFt3oIDStQBmxnLPr8eiOgQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/59f893c3-b0a4-4524-a7cd-a84f45df5b71.jpg"
@@ -377,9 +377,9 @@
             "categoryId": 7,
             "name": "Медиаплеер Xiaomi TV Box S, 8ГБ [pfj4167ru]",
             "features": {
-                "Максимальное разрешение": "3840x2160",
-                "Тип процессора": "ARM Cortex A35",
-                "Встроенная flash память": "16 ГБ"
+                "max resolution": "3840x2160",
+                "processor type": "ARM Cortex A35",
+                "flash memory": "16 ГБ"
             },
             "price": 5990,
             "src": "https://cdn.citilink.ru/VS7TL_K0htl2TGJPzBb1JFt3oIDStQBmxnLPr8eiOgQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/59f893c3-b0a4-4524-a7cd-a84f45df5b71.jpg"
@@ -389,9 +389,9 @@
             "categoryId": 7,
             "name": "Медиаплеер IconBIT XDS 51, 16ГБ [xlr3049]",
             "features": {
-                "Максимальное разрешение": "3840x2160",
-                "Тип процессора": "ARM Cortex A53",
-                "Встроенная flash память": "16 ГБ"
+                "max resolution": "3840x2160",
+                "processor type": "ARM Cortex A53",
+                "flash memory": "16 ГБ"
             },
             "price": 5780,
             "src": "https://cdn.citilink.ru/dEC-bjbgnHXVBHztskA2W5L3vfN2vALhe78s5IDW7SY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/bc6d73bc-5db6-40ab-ae34-b16a0a569ae7.jpg"
@@ -401,9 +401,9 @@
             "categoryId": 7,
             "name": "Медиаплеер IconBIT XDS 51, 16ГБ [xlr3049]",
             "features": {
-                "Максимальное разрешение": "1920x1080",
-                "Тип процессора": "Allwinner H616 ARM QuadCore",
-                "Встроенная flash память": "16 ГБ"
+                "max resolution": "1920x1080",
+                "processor type": "Allwinner H616 ARM QuadCore",
+                "flash memory": "16 ГБ"
             },
             "price": 3990,
             "src": "https://cdn.citilink.ru/eqId8VUuRITsJwhWeiN1sYb9FJo3CR3UGTQX7rQJCjs/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/17eae65b-5e1a-4aa9-9ff3-a75b8bcbd014.jpg"
@@ -413,9 +413,9 @@
             "categoryId": 7,
             "name": "Медиаплеер Hyundai H-DMP103, 64ГБ",
             "features": {
-                "Максимальное разрешение": "3840x2160",
-                "Тип процессора": "Amlogic S905X4",
-                "Встроенная flash память": "64 ГБ"
+                "max resolution": "3840x2160",
+                "processor type": "Amlogic S905X4",
+                "flash memory": "64 ГБ"
             },
             "price": 6440,
             "src": "https://cdn.citilink.ru/0OCCHFS0wjTnat2Ffg4ofEdTfsFA6f66agfw76Z9cFM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b100a179-5691-48e1-9207-a99dcb20b0c6.jpg"
@@ -425,9 +425,9 @@
             "categoryId": 8,
             "name": "Саундбар LG S80TR 5.1.3 360Вт+220Вт черный",
             "features": {
-                "Суммарная выходная мощность": "300 Вт",
-                "Выходная мощность сабвуфера": "220 Вт",
-                "Поддержка Dolby Digital": "есть"
+                "total ouput": "300 Вт",
+                "subwoofer output": "220 Вт",
+                "dolby digital": "есть"
             },
             "price": 71990,
             "src": "https://cdn.citilink.ru/-rSp7XF_M02RbpVpHMPrUF3bZzgnzvPkd48yYZzdfjM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b2dad840-e664-4cd7-a87a-e091e0232f86.jpg"
@@ -437,9 +437,9 @@
             "categoryId": 8,
             "name": "Саундбар LG S90TY 5.1.3 570Вт черный",
             "features": {
-                "Суммарная выходная мощность": "570 Вт",
-                "Выходная мощность сабвуфера": "220 Вт",
-                "Поддержка Dolby Digital": "есть"
+                "total ouput": "570 Вт",
+                "subwoofer output": "220 Вт",
+                "dolby digital": "есть"
             },
             "price": 85820,
             "src": "https://cdn.citilink.ru/DxZVVDL54Aekv38YCO74frTaxt1Dp3MfdnubOtmG300/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/509cecbc-7ec5-4936-a16a-f48aada73ba7.jpg"
@@ -449,9 +449,9 @@
             "categoryId": 8,
             "name": "Саундбар LG S80QR 5.1.3 400Вт+220Вт черный",
             "features": {
-                "Суммарная выходная мощность": "400 Вт",
-                "Выходная мощность сабвуфера": "220 Вт",
-                "Поддержка Dolby Digital": "есть"
+                "total ouput": "400 Вт",
+                "subwoofer output": "220 Вт",
+                "dolby digital": "есть"
             },
             "price": 81970,
             "src": "https://cdn.citilink.ru/03bInUiX4E_6hDBCMgbVkojni6AereJT0p-TyTW7D1I/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d1a68fe4-1724-430f-b73f-450031d2e706.jpg"
@@ -461,9 +461,9 @@
             "categoryId": 8,
             "name": "Саундбар JBL Deep Bass 2.1 100Вт+200Вт черный",
             "features": {
-                "Суммарная выходная мощность": "100 Вт",
-                "Выходная мощность сабвуфера": "200 Вт",
-                "Поддержка Dolby Digital": "есть"
+                "total ouput": "100 Вт",
+                "subwoofer output": "200 Вт",
+                "dolby digital": "есть"
             },
             "price": 36540,
             "src": "https://cdn.citilink.ru/LLz_m-8dy1StrX_zuFccEqzK7XZ_IaFqjWm5xPd_heQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d36ff3cc-e1b3-4b78-88d4-979866e42c06.jpg"
@@ -473,9 +473,9 @@
             "categoryId": 8,
             "name": "Саундбар JBL Deep Bass 2.1 100Вт+200Вт черный",
             "features": {
-                "Суммарная выходная мощность": "200 Вт",
-                "Выходная мощность сабвуфера": "160 Вт",
-                "Поддержка Dolby Digital": "есть"
+                "total ouput": "200 Вт",
+                "subwoofer output": "160 Вт",
+                "dolby digital": "есть"
             },
             "price": 39990,
             "src": "https://cdn.citilink.ru/R3Wgo0-zbJ5B4zCCWGr6JDbs2T9WP7A77fsaa9rTc0E/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/c1f79f4a-4fb8-40b8-af11-2bca973cfa09.jpg"
@@ -485,9 +485,9 @@
             "categoryId": 9,
             "name": "Микрофон Audio-Technica PRO25AX, черный [80001078]",
             "features": {
-                "Частотный диапазон": "30Гц-120КГц",
-                "Тип подключения": "проводной XLR",
-                "Длина провода": "5 м"
+                "frequency": "30Гц-120КГц",
+                "connection type": "проводной XLR",
+                "wire length": "5 м"
             },
             "price": 16990,
             "src": "https://cdn.citilink.ru/mMJ2To90ZNmz0Kf0BGDNc_6RhljvJwVRUKvBcTLN5kI/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/1898dadb-0b55-46ee-9500-5152c9978f92.jpg"
@@ -497,9 +497,9 @@
             "categoryId": 9,
             "name": "Микрофон Razer Seiren V2 X, черный [rz19-04050100-r3m1]",
             "features": {
-                "Частотный диапазон": "20Гц-20КГц",
-                "Тип подключения": "проводной Type-C",
-                "Длина провода": "1.8 м"
+                "frequency": "20Гц-20КГц",
+                "connection type": "проводной Type-C",
+                "wire length": "1.8 м"
             },
             "price": 5999,
             "src": "https://cdn.citilink.ru/-HvvzoNVNYn8m1wVIvZLmAaY4EGg7oRhL1xmptBKivU/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b4122098-434f-44bd-95ab-f7d74f38543e.jpg"
@@ -509,9 +509,9 @@
             "categoryId": 9,
             "name": "Микрофон Audio-Technica ATR2100x, черный [80001027]",
             "features": {
-                "Частотный диапазон": "50Гц-15КГц",
-                "Тип подключения": "проводной USB",
-                "Длина провода": "2 м"
+                "frequency": "50Гц-15КГц",
+                "connection type": "проводной USB",
+                "wire length": "2 м"
             },
             "price": 7990,
             "src": "https://cdn.citilink.ru/llAgYVaqYTFN9i8WZAE7mal7SiGLi-ZGUaq7LNvwEt0/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/3d510283-cd5b-4439-a1f7-d9d91729e86a.jpg"
@@ -521,9 +521,9 @@
             "categoryId": 9,
             "name": "Микрофон Oklick SM-400G, черный [1933536]",
             "features": {
-                "Частотный диапазон": "50Гц-20КГц",
-                "Тип подключения": "проводной USB",
-                "Длина провода": "2 м"
+                "frequency": "50Гц-20КГц",
+                "connection type": "проводной USB",
+                "wire length": "2 м"
             },
             "price": 4959,
             "src": "https://cdn.citilink.ru/NAQ92KPCc9bEbxPIl4gvn1FFhoqgkXImVYoPP12iJxc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/80f081d3-74b6-4985-85ff-0f2f99abfdbb.jpg"
@@ -533,9 +533,9 @@
             "categoryId": 9,
             "name": "Микрофон Defender Pulsar GM303, черный [71662]",
             "features": {
-                "Частотный диапазон": "100Гц-16КГц",
-                "Тип подключения": "проводной USB",
-                "Длина провода": "1.8 м"
+                "frequency": "100Гц-16КГц",
+                "connection type": "проводной USB",
+                "wire length": "1.8 м"
             },
             "price": 1949,
             "src": "https://cdn.citilink.ru/8--xDw9Kk4lXXnPABYEL71C9CZeNEPwlZEx0SQXbR78/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ab78cb74-266a-4b95-aab6-65cf9c7d1564.jpg"
@@ -545,9 +545,9 @@
             "categoryId": 10,
             "name": "12.4\" Планшет Samsung Galaxy Tab S10+ BSM-X826B 12/256 GB 9300+ 5G, 2800 x 1752, 120Гц, Android 14, со стилусом, серый [sm-x826bzarcau]",
             "features": {
-                "Диагональ экрана": "12.4\"",
-                "Разрешение экрана": "2800x1752",
-                "Частота обновления экрана": "120 Гц"
+                "diagonal": "12.4\"",
+                "screen resolution": "2800x1752",
+                "screen ferequency": "120 Гц"
             },
             "price": 105990,
             "src": "https://cdn.citilink.ru/5xJNbrWYZF9EXAUKsRJJdHK2yjHPOrrJmI4_6TrwHoQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/de62eae5-529d-44b8-83e6-6a6ecb70ea30.jpg"
@@ -557,9 +557,9 @@
             "categoryId": 10,
             "name": "8.3\" Планшет Apple iPad mini 2024 Wi-Fi + Cellular A2995 8/256 GB A17 Pro 5G, 2266 x 1488, iOS, фиолетовый",
             "features": {
-                "Диагональ экрана": "8.3\"",
-                "Разрешение экрана": "2266x1488",
-                "Частота обновления экрана": "120 Гц"
+                "diagonal": "8.3\"",
+                "screen resolution": "2266x1488",
+                "screen ferequency": "120 Гц"
             },
             "price": 99990,
             "src": "https://cdn.citilink.ru/3TX1dnhoEQJv4P_RNl-a0SDHcpb-2VGNuUbiNEwEOF4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0675762f-8329-443f-8a2e-c105a452c372.jpg"
@@ -569,9 +569,9 @@
             "categoryId": 10,
             "name": "11\" Планшет Apple iPad Air 2024 11\" Wi-Fi + Cellular A2903 8/256 GB M2 5G, 2360 x 1640, iOS, сияющая звезда",
             "features": {
-                "Диагональ экрана": "11\"",
-                "Разрешение экрана": "2360x1640",
-                "Частота обновления экрана": "60 Гц"
+                "diagonal": "11\"",
+                "screen resolution": "2360x1640",
+                "screen ferequency": "60 Гц"
             },
             "price": 107990,
             "src": "https://cdn.citilink.ru/tbEE35vA5E_Qhw7B8EKp9RHlbpLiuADmSxFtFw_hYsc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/304441f9-e991-4670-81ad-ba1d17bd1a71.jpg"
@@ -581,9 +581,9 @@
             "categoryId": 10,
             "name": "11\" Планшет Samsung Galaxy Tab S9 SM-X716B 12/256 GB 8 Gen 2 5G, 2560 x 1600, 120Гц, Android 13, со стилусом, графит",
             "features": {
-                "Диагональ экрана": "11\"",
-                "Разрешение экрана": "2560x1600",
-                "Частота обновления экрана": "120 Гц"
+                "diagonal": "11\"",
+                "screen resolution": "2560x1600",
+                "screen ferequency": "120 Гц"
             },
             "price": 157990,
             "src": "https://cdn.citilink.ru/tbEE35vA5E_Qhw7B8EKp9RHlbpLiuADmSxFtFw_hYsc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/304441f9-e991-4670-81ad-ba1d17bd1a71.jpg"
@@ -593,9 +593,9 @@
             "categoryId": 10,
             "name": "12.4\" Планшет Samsung Galaxy Tab S9 FE+ BSM-X616B 8/128 GB 1380 5G, 2560 x 1600, 90Гц, Android 13, со стилусом, розовый",
             "features": {
-                "Диагональ экрана": "12.4\"",
-                "Разрешение экрана": "2560x1600",
-                "Частота обновления экрана": "90 Гц"
+                "diagonal": "12.4\"",
+                "screen resolution": "2560x1600",
+                "screen ferequency": "90 Гц"
             },
             "price": 59990,
             "src": "https://cdn.citilink.ru/ZhZFQ-HVODPwA9Tgf6L6k_BLpMtBOEaA2rFHpVVxNqQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ed5d667f-2e0b-4d32-a40c-9b94f4cc87f2.jpg"
@@ -605,9 +605,9 @@
             "categoryId": 11,
             "name": "Хаб (разветвитель) D-Link DUB-2325, черный",
             "features": {
-                "Количество портов USB": "2",
-                "Питание": "адаптер/через USB",
-                "Вес": "210 грамм"
+                "usb port amount": "2",
+                "power supply": "адаптер/через USB",
+                "weight": "210 грамм"
             },
             "price": 3470,
             "src": "https://cdn.citilink.ru/_xtb1IrCWO2xkh-PoUVG4P2XsmVx4tDnW7yAZqGzcX0/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/069dcf4e-597f-4757-95aa-21efb5ae67b2.jpg"
@@ -617,9 +617,9 @@
             "categoryId": 11,
             "name": "Хаб (разветвитель) Logitech 993-001951, черный",
             "features": {
-                "Количество портов USB": "2",
-                "Питание": "адаптер",
-                "Вес": "300 грамм"
+                "usb port amount": "2",
+                "power supply": "адаптер",
+                "weight": "300 грамм"
             },
             "price": 86510,
             "src": "https://cdn.citilink.ru/KTPY63EItFX0YwlV7eN9j8fYnP865Bj9XFhDsNjB41o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/e96c2289-9723-4c5c-a4b6-d4ae080cb15d.jpg"
@@ -629,9 +629,9 @@
             "categoryId": 11,
             "name": "Хаб (разветвитель) ORIGO OU3350SNPD, черный",
             "features": {
-                "Количество портов USB": "3",
-                "Питание": "через USB Type C",
-                "Вес": "90 грамм"
+                "usb port amount": "3",
+                "power supply": "через USB Type C",
+                "weight": "90 грамм"
             },
             "price": 5270,
             "src": "https://cdn.citilink.ru/AT1pmBzf1xF2no1auK5WeLqRG0vj6g7pbGIOLPtnyHc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/042cbc4f-2a13-4b8b-b8d1-ceec62889d69.jpg"
@@ -641,9 +641,9 @@
             "categoryId": 11,
             "name": "Хаб (разветвитель) PALMEXX серый",
             "features": {
-                "Количество портов USB": "3",
-                "Питание": "через USB Type C",
-                "Вес": "62 грамм"
+                "usb port amount": "3",
+                "power supply": "через USB Type C",
+                "weight": "62 грамм"
             },
             "price": 3590,
             "src": "https://cdn.citilink.ru/9e7Yh9Cg5P-U5vbDWvXTbhkNNwfjfTmsqSsdwYHO_Z4/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/bd4c259b-b90c-4262-b6a4-c73f1085586a.jpg"
@@ -653,9 +653,9 @@
             "categoryId": 11,
             "name": "Хаб (разветвитель) ORIGO OU3360NPD, серебристый",
             "features": {
-                "Количество портов USB": "3",
-                "Питание": "через USB Type C",
-                "Вес": "72 грамм"
+                "usb port amount": "3",
+                "power supply": "через USB Type C",
+                "weight": "72 грамм"
             },
             "price": 3620,
             "src": "https://cdn.citilink.ru/_FXWkUGaGQGpsb9SHN5yXloKq_Y5mQHdnKfuCpOem5o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/54406d58-a87c-4f25-a813-8feb1b279214.jpg"
@@ -665,9 +665,9 @@
             "categoryId": 12,
             "name": "Материнская плата ASUS ROG STRIX B650E-E GAMING WIFI, SocketAM5, AMD B650, ATX, Ret",
             "features": {
-                "Сокет": "SocketAM5",
-                "Чипсет": "AMD B650",
-                "Тип памяти": "DDR5"
+                "socket": "SocketAM5",
+                "chipset": "AMD B650",
+                "memory type": "DDR5"
             },
             "price": 33800,
             "src": "https://cdn.citilink.ru/DtVZ77a15TXvHf58JBjwYFvJySuWa2TGFlHbSZD_SWE/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/00093117-b10c-465f-b102-afc28346ae84.jpg"
@@ -677,9 +677,9 @@
             "categoryId": 12,
             "name": "Материнская плата ASUS ROG STRIX B650-A GAMING WIFI, SocketAM5, AMD B650, ATX, Ret",
             "features": {
-                "Сокет": "SocketAM5",
-                "Чипсет": "AMD B650",
-                "Тип памяти": "DDR5"
+                "socket": "SocketAM5",
+                "chipset": "AMD B650",
+                "memory type": "DDR5"
             },
             "price": 26000,
             "src": "https://cdn.citilink.ru/mlf_XKo7j5BbVsOK31bKosf_XbzVvo-WNA8O7wKl7zM/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ead2dfda-46c7-40d3-b394-b6376cce3ba7.jpg"
@@ -689,9 +689,9 @@
             "categoryId": 12,
             "name": "Материнская плата ASUS ROG STRIX B650-A GAMING WIFI, SocketAM5, AMD B650, ATX, Ret",
             "features": {
-                "Сокет": "LGA 1700",
-                "Чипсет": "Intel Q670",
-                "Тип памяти": "DDR5"
+                "socket": "LGA 1700",
+                "chipset": "Intel Q670",
+                "memory type": "DDR5"
             },
             "price": 17810,
             "src": "https://cdn.citilink.ru/BQZyt8mryqWd8gSwu0xwtcDRmQDDdUi97SmjIt2aIWc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/fc123971-03a7-48b4-93c0-68e115dd63b8.jpg"
@@ -701,9 +701,9 @@
             "categoryId": 12,
             "name": "Материнская плата MSI PRO Z790-S WIFI, LGA 1700, Intel Z790, ATX, Ret",
             "features": {
-                "Сокет": "LGA 1700",
-                "Чипсет": "Intel Z790",
-                "Тип памяти": "DDR5"
+                "socket": "LGA 1700",
+                "chipset": "Intel Z790",
+                "memory type": "DDR5"
             },
             "price": 19500,
             "src": "https://cdn.citilink.ru/FjIBPYYOqUqHSCFCp8b7teeqIQl-nLfbjdSDHJVRotQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/f65acae5-8946-4974-b99f-74175002fd20.jpg"
@@ -713,9 +713,9 @@
             "categoryId": 12,
             "name": "Материнская плата Gigabyte B760 GAMING X DDR4, LGA 1700, Intel B760, ATX, Ret",
             "features": {
-                "Сокет": "LGA 1700",
-                "Чипсет": "Intel B760",
-                "Тип памяти": "DDR4"
+                "socket": "LGA 1700",
+                "chipset": "Intel B760",
+                "memory type": "DDR4"
             },
             "price": 12000,
             "src": "https://cdn.citilink.ru/6BZwUXERwERevk9PZHeDE-fCyCiyxPlHaFISrHML74k/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/eb477e88-e4f3-4179-aa77-17fb39b5b75f.jpg"
@@ -725,9 +725,9 @@
             "categoryId": 13,
             "name": "Видеокарта ASUS NVIDIA GeForce RTX 4060 RTX4060-O8G-LP-BRK 8ГБ GDDR6, Low Profile, OC, Ret",
             "features": {
-                "Объем видеопамяти": "8 ГБ",
-                "Тип видеопамяти": "GDDR6",
-                "Разрядность шины видеопамяти": "128 bit"
+                "video memory capacity": "8 ГБ",
+                "video memory type": "GDDR6",
+                "video memory bus capacity": "128 bit"
             },
             "price": 38240,
             "src": "https://cdn.citilink.ru/rqmiY2OTGSHenH22_PjLpJ6wj1Oj6gfhcszH4ggGw2Y/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b810624c-fc8e-4ede-bb09-bad449ecc6ba.jpg"
@@ -737,9 +737,9 @@
             "categoryId": 13,
             "name": "Видеокарта Gigabyte NVIDIA GeForce RTX 3060 GV-N3060WF2-12GD 12ГБ Windforce, GDDR6, Ret",
             "features": {
-                "Объем видеопамяти": "12 ГБ",
-                "Тип видеопамяти": "GDDR6",
-                "Разрядность шины видеопамяти": "192 bit"
+                "video memory capacity": "12 ГБ",
+                "video memory type": "GDDR6",
+                "video memory bus capacity": "192 bit"
             },
             "price": 36110,
             "src": "https://cdn.citilink.ru/CTghrAmIBAcxWcD60RTbVPi9itIoJzQvaLL8DgYjcKg/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/8271a81b-d0c8-493d-bd40-73f06f9d7142.jpg"
@@ -749,9 +749,9 @@
             "categoryId": 13,
             "name": "Видеокарта Gigabyte AMD Radeon RX 7600 GV-R76GAMING-8GD 8ГБ Gaming, GDDR6, Ret",
             "features": {
-                "Объем видеопамяти": "8 ГБ",
-                "Тип видеопамяти": "GDDR6",
-                "Разрядность шины видеопамяти": "128 bit"
+                "video memory capacity": "8 ГБ",
+                "video memory type": "GDDR6",
+                "video memory bus capacity": "128 bit"
             },
             "price": 34430,
             "src": "https://cdn.citilink.ru/HilXsM_iqutDGWvVQmUO_D3AIXkcCP0UrPItjKwHizU/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/00c4ad5c-25da-4b56-b832-0db113afadd5.jpg"
@@ -761,9 +761,9 @@
             "categoryId": 13,
             "name": "Видеокарта Palit NVIDIA GeForce RTX 4060 RTX4060 STORMX 8ГБ StormX, GDDR6, Ret",
             "features": {
-                "Объем видеопамяти": "8 ГБ",
-                "Тип видеопамяти": "GDDR6",
-                "Разрядность шины видеопамяти": "128 bit"
+                "video memory capacity": "8 ГБ",
+                "video memory type": "GDDR6",
+                "video memory bus capacity": "128 bit"
             },
             "price": 31070,
             "src": "https://cdn.citilink.ru/nfWezYAwBJLF5xUGlZdAggVV95SV71by-Eyb-X5NSdw/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b59b79fa-7ef2-44d3-b1da-3af976381ac6.jpg"
@@ -773,9 +773,9 @@
             "categoryId": 13,
             "name": "Видеокарта Palit NVIDIA GeForce RTX 4060 RTX4060 STORMX 8ГБ StormX, GDDR6, Ret",
             "features": {
-                "Объем видеопамяти": "6 ГБ",
-                "Тип видеопамяти": "GDDR6",
-                "Разрядность шины видеопамяти": "192 bit"
+                "video memory capacity": "6 ГБ",
+                "video memory type": "GDDR6",
+                "video memory bus capacity": "192 bit"
             },
             "price": 23500,
             "src": "https://cdn.citilink.ru/Kao3uxd2E1Bko2Wchf9w-p1xgJu0r784wlv4Smyfa5w/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/a9af075a-cb09-4bbb-8ff3-0dd43316f4bb.jpg"
@@ -785,9 +785,9 @@
             "categoryId": 14,
             "name": "Web-камера Defender G-Lens 2590, черный",
             "features": {
-                "Разрешение видео": "2550х1440 пикселей",
-                "Запись видео": "720p",
-                "Угол обзора": "86.1 °"
+                "video resolution": "2550х1440 пикселей",
+                "video recording": "720p",
+                "viewing angle": "86.1 °"
             },
             "price": 3099,
             "src": "https://cdn.citilink.ru/YdUHpsYEtpSqVmeedl5WkPDWDYdOf5GU-NPR7KsAG4M/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/9f1559bc-ff2d-47b4-920e-1667c3f88f18.jpg"
@@ -797,9 +797,9 @@
             "categoryId": 14,
             "name": "Web-камера A4TECH PK-910P, черный",
             "features": {
-                "Разрешение видео": "1280х720 пикселей",
-                "Запись видео": "720p",
-                "Угол обзора": "68 °"
+                "video resolution": "1280х720 пикселей",
+                "video recording": "720p",
+                "viewing angle": "68 °"
             },
             "price": 2170,
             "src": "https://cdn.citilink.ru/QbO6UxARIkvGumB-sjbfF_FGknN-2GnvKeatPSA1CDw/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/c249bd52-2856-4c7a-b019-9cc18561da91.jpg"
@@ -809,9 +809,9 @@
             "categoryId": 14,
             "name": "Web-камера Oklick OK-C013FH, черный",
             "features": {
-                "Разрешение видео": "1920х1080 пикселей",
-                "Запись видео": "1080p",
-                "Угол обзора": "80 °"
+                "video resolution": "1920х1080 пикселей",
+                "video recording": "1080p",
+                "viewing angle": "80 °"
             },
             "price": 1790,
             "src": "https://cdn.citilink.ru/yZ8rbVKU2n5DzBS9pvpTht9yoKBX-HlVn0g7WoWWP44/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/4bc4f964-7247-4b9f-ac8e-2325561e0fb2.jpg"
@@ -821,9 +821,9 @@
             "categoryId": 14,
             "name": "Web-камера Oklick OK-C013FH, черный",
             "features": {
-                "Разрешение видео": "640х480 пикселей",
-                "Запись видео": "640p",
-                "Угол обзора": "52 °"
+                "video resolution": "640х480 пикселей",
+                "video recording": "640p",
+                "viewing angle": "52 °"
             },
             "price": 2010,
             "src": "https://cdn.citilink.ru/sGNnlQkfxwh8LrKqYFeqmEPqWnqskaR_FBG8RU-TSFQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/73f5c6b6-9537-440e-9541-df7c20613b01.jpg"
@@ -833,9 +833,9 @@
             "categoryId": 14,
             "name": "Web-камера Logitech Conference Cam BCC950, черный",
             "features": {
-                "Разрешение видео": "1920х1080 пикселей",
-                "Запись видео": "1080p",
-                "Угол обзора": "78 °"
+                "video resolution": "1920х1080 пикселей",
+                "video recording": "1080p",
+                "viewing angle": "78 °"
             },
             "price": 11999,
             "src": "https://cdn.citilink.ru/R8yzEQOByM60y5yLG_KsluC1EV-w1LWOuk4i60D0OoA/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b4808462-a796-4270-abad-1f8989e0ee92.jpg"
@@ -845,9 +845,9 @@
             "categoryId": 15,
             "name": "Гарнитура игровая Logitech G Pro X 2 Lightspeed, для компьютера, накладные, Bluetooth/3,5 мм, черный",
             "features": {
-                "Частотный диапазон": "20 Гц - 20 кГц",
-                "Чувствительность динамика": "87.8 дБ",
-                "Крепление микрофона": "съемный однонаправленный/гибкий"
+                "frequency": "20 Гц - 20 кГц",
+                "noise reduction rating": "87.8 дБ",
+                "microphone fixation": "съемный однонаправленный/гибкий"
             },
             "price": 29999,
             "src": "https://cdn.citilink.ru/08ZTrapfu_CpmYi3DrB6LltRpTAl5MSX4ZkcgWHjmOY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/0b65b15b-9079-48c3-9d81-c25380609165.jpg"
@@ -857,9 +857,9 @@
             "categoryId": 15,
             "name": "Гарнитура игровая Logitech G Pro X 2 Lightspeed, для компьютера, накладные, Bluetooth/3,5 мм, черный",
             "features": {
-                "Частотный диапазон": "10 Гц - 21 кГц",
-                "Чувствительность динамика": "100 дБ",
-                "Крепление микрофона": "гибкий однонаправленный"
+                "frequency": "10 Гц - 21 кГц",
+                "noise reduction rating": "100 дБ",
+                "microphone fixation": "гибкий однонаправленный"
             },
             "price": 13999,
             "src": "https://cdn.citilink.ru/iEavxYFtkdM5suMXdnEE7fhUR0j9xZTNy461V5Whxo8/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/094119e9-2480-44cf-9a5b-01decec5de85.jpg"
@@ -869,9 +869,9 @@
             "categoryId": 15,
             "name": "Наушники Edifier WH950NB, Bluetooth, мониторные, слоновая кость/золотистый",
             "features": {
-                "Частотный диапазон": "20 Гц - 40 кГц",
-                "Чувствительность динамика": "91 дБ",
-                "Крепление микрофона": "встроенный"
+                "frequency": "20 Гц - 40 кГц",
+                "noise reduction rating": "91 дБ",
+                "microphone fixation": "встроенный"
             },
             "price": 14770,
             "src": "https://cdn.citilink.ru/ugDLirfCBuFJZDkxLd4I6kx4bXNag5t99Gqx5sfmCFU/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/e5b50594-8c06-448a-b0ae-a5b6d351260d.jpg"
@@ -881,9 +881,9 @@
             "categoryId": 15,
             "name": "Гарнитура игровая Logitech G733 Lightspeed, для компьютера и игровых консолей, накладные, радио, черный",
             "features": {
-                "Частотный диапазон": "20 Гц - 20 кГц",
-                "Чувствительность динамика": "85 дБ",
-                "Крепление микрофона": "съемный однонаправленный"
+                "frequency": "20 Гц - 20 кГц",
+                "noise reduction rating": "85 дБ",
+                "microphone fixation": "съемный однонаправленный"
             },
             "price": 12999,
             "src": "https://cdn.citilink.ru/2Nvp9dNZP3aM8JjSyVnBXe9lZXMt0NLbDHYt2x_ftiA/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/70e0608e-d06b-4bb4-a46f-e9614f71f28a.jpg"
@@ -893,9 +893,9 @@
             "categoryId": 15,
             "name": "Гарнитура игровая Logitech G733 Lightspeed, для компьютера и игровых консолей, накладные, радио, черный",
             "features": {
-                "Частотный диапазон": "20 Гц - 20 кГц",
-                "Чувствительность динамика": "85 дБ",
-                "Крепление микрофона": "встроенный"
+                "frequency": "20 Гц - 20 кГц",
+                "noise reduction rating": "85 дБ",
+                "microphone fixation": "встроенный"
             },
             "price": 7890,
             "src": "https://cdn.citilink.ru/xJlyov7U6l4fImMHxuwIThB1nWsaeSmUuiuG-uUgRqk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d5991a1b-0d48-4c89-b05e-213691c2bc7d.jpg"

@@ -82,3 +82,21 @@
         z-index: 5;
     }
 }
+.pagination__list {
+    display: flex;
+}
+.pagination__button {
+    border: 1px solid #cfe2ff;
+    border-radius: 4px;
+    margin: 0 5px;
+    padding: 5px 10px;
+    color: #000;
+    font-size: 14px;
+    &:hover {
+        background-color: #cfe2ff;
+    }
+    &.active {
+        background-color: #cfe2ff;
+        border: 1px solid #5594f3;
+    }
+}

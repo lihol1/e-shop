@@ -1,5 +1,5 @@
 .my-modal {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
@@ -29,8 +29,10 @@
         text-align: end;
     }
     &__wrapper {
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        height: 98%;
+        height: 100%;
         overflow-y: auto;
     }
     &__title {
@@ -41,16 +43,28 @@
     &__list {
         padding: 0;
         width: 100%;
+        flex: 1 1 auto;
     }
     &__item {
         display: grid;
         grid-template-columns: 100px 380px 2fr 4fr 2fr;
         font-size: 16px;
-        margin-bottom: 45px;
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
     }
     &__image {
+        position: relative;
+        height: 150px;
+        width: 100%;
+
         img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     }
     &__description {
@@ -84,5 +98,99 @@
         &:hover {
             color: #525252;
         }
+    }
+    &__btns {
+        display: flex;
+        justify-content: end;
+    }
+    &__button {
+        margin-right: 20px;
+    }
+}
+.order {
+    &__title {
+        font-size: 26px;
+        text-align: start;
+        margin-bottom: 40px;
+    }
+    &__form {
+        text-align: start;
+    }
+    &__fieldset {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__legend {
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 30px;
+        margin-bottom: 185px;
+    }
+    &__item {
+        input {
+            appearance: none;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #999;
+            color: #000;
+            background: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            padding-block: 0;
+            padding-inline: 0;
+            font: inherit;
+            letter-spacing: inherit;
+        }
+    }
+    &__label {
+        font-size: 12px;
+        width: 100%;
+    }
+    &__btn-block {
+        text-align: end;
+    }
+}
+
+.notice {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    &__list {
+        padding: 0;
+    }
+    &__item {        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        border: 1px solid #999;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+    &__left {
+        padding: 0 10px;
+        border-right: 1px solid #999;
+    }
+    &__image {
+        width: 100%;
+        margin-bottom: 10px;
+
+        img {
+            width: 30%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__name {
+        font-size: 14px;
+        text-align: left;
+    }
+    &__text {
+        padding: 0 10px;
     }
 }

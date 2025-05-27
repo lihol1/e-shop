@@ -30,9 +30,13 @@ export type ProductState = {
     searchList: Array<Product[]>;
     maxPrice: number;
     cart: Product[];
+    order: Order;
+    orders: Order[];
+    popularCategories: Category[];
+    store: Product[];
 };
 
-export type SearchParams = {
+export type SParams = {
     min: number;
     max: number;
     features: {} | Feat;
@@ -47,3 +51,23 @@ export type Data = {
     products: Product[];
     categories: Category[];
 };
+
+export type FilterFeature = {
+    [string: string]: boolean;
+};
+
+export type Order = {
+    id: number;
+    author: string;
+    orderTotal: number;
+    products: Product[];
+};
+
+export type PopularCategory = {
+    categoryId: number;
+    quantity: number;
+}
+
+export type Aliases = {
+    [key: string]: string
+}

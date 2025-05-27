@@ -65,6 +65,8 @@
         transition: opacity 0.2s ease;
     }
     &__btn {
+        width: 100%;
+        text-align: left;
         color: #000;
     }
     &__subcatalog {
@@ -79,15 +81,15 @@
         border-right: 1px solid #afadad;
         border-bottom: 1px solid #afadad;
     }
-    &__sublist {
+    .subcatalog__list {
         font-size: 14px;
         padding-left: 0;
     }
-    &__subtitle {
+    .subcatalog__subtitle {
         font-size: 16px;
         margin-bottom: 35px;
     }
-    &__subitem {
+    .subcatalog__item {
         padding: 5px 10px;
         &:hover {
             background-color: #dbdada;

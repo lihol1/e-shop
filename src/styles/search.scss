@@ -1,8 +1,8 @@
 .search {
-    &__list {
+    &__list-main {
         padding: 20px 40px;
     }
-    &__item {
+    &__item-main {
         padding: 20px 0;
         border-bottom: 1px solid #999;
     }
@@ -30,13 +30,26 @@
     &__category-name {
         font-size: 30px;
     }
-    &__category-list {
+    // &__category-list {
+    //     padding: 20px 0;
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fill, 200px);
+    //     gap: 50px;
+    // }
+
+    // &__category-item {
+    //     display: grid;
+    //     grid-template-rows: 200px auto 40px;
+    // }
+
+    &__list {
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(auto-fill, 200px);
         gap: 50px;
     }
-    &__category-item {
+
+    &__item {
         display: grid;
         grid-template-rows: 200px auto 40px;
     }
