@@ -1,17 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ru } from "../aliases";
-import { Product } from "../types";
+import { ru } from "../../aliases";
+import { Product } from "../../types";
 import { faCartShopping, faRubleSign } from "@fortawesome/free-solid-svg-icons";
-import { addItemToCart } from "../store/productSlice";
-import { Dispatch, SetStateAction } from "react";
-import { useAppDispatch } from "../hooks/hooks";
+import { addItemToCart } from "../../store/cartSlice";
+import { setIsShown } from "../../store/generalSlice";
+import { useAppDispatch } from "../../hooks/hooks";
 
 type CategoryPageItemProps = {
     prod: Product;
-    setIsShown: Dispatch<SetStateAction<boolean>>;
 };
 
-export default function CategoryPageItem({ prod, setIsShown }: CategoryPageItemProps) {
+export default function CategoryPageItem({ prod }: CategoryPageItemProps) {
     const dispatch = useAppDispatch();
 
     function addToCart(item: Product) {
@@ -19,9 +18,9 @@ export default function CategoryPageItem({ prod, setIsShown }: CategoryPageItemP
         showToast();
     }
     function showToast() {
-        setIsShown(true);
+        dispatch(setIsShown(true));
         setTimeout(() => {
-            setIsShown(false);
+            dispatch(setIsShown(false));
         }, 1500);
     }
 

@@ -1,15 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Product } from "../types";
+import { Order, Product } from "../../types";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
 
 type OrderItemProps = {
     prod: Product;
-    id: number;
-    author: string;
-    orderTotal: number;
+    order: Order;
 };
 
-export default function OrderItem({ prod, id, author, orderTotal }: OrderItemProps) {
+export default function OrderItem({ prod, order }: OrderItemProps) {
     let formatter = new Intl.NumberFormat("ru");
 
     return (
@@ -26,11 +24,11 @@ export default function OrderItem({ prod, id, author, orderTotal }: OrderItemPro
             </div>
 
             <div className="orders__description">
-                <p>Заказ №: {id}</p>
+                <p>Заказ №: {order.id}</p>
                 <p>Наименование товара: {prod.name}</p>
-                <p>ФИО: {author}</p>
+                <p>ФИО: {order.author}</p>
                 <p>Кол-во: {prod.quantity}</p>
-                <p>Сумма заказа: {orderTotal}</p>
+                <p>Сумма заказа: {order.orderTotal}</p>
             </div>
         </>
     );

@@ -1,23 +1,19 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router";
-import { Order, Product } from "../types";
-import { useAppDispatch, useAppSelector } from "../hooks/hooks";
-import { formOrder, clearCart } from "../store/productSlice";
-import Notice from "./MissingProdNotice";
+import { Order, Product } from "../../types";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { addOrder, formOrder } from "../../store/orderSlice";
+import { clearCart, setNoticeIsOpen, getTotal } from "../../store/cartSlice";
+import { setCount } from "../../store/orderSlice";
+import { setFormIsOpen, setModalIsOpen } from "../../store/generalSlice";
+import MissingProdNotice from "./MissingProdNotice";
+import { getPopularCategories } from "../../store/categorySlice";
 
-interface IOrderFormProps {
-    setFormIsOpen: Dispatch<SetStateAction<boolean>>;
-    setModalIsOpen: Dispatch<SetStateAction<boolean>>;
-    total: number;
-    count: number;
-    setCount: Dispatch<SetStateAction<number>>;
-    noticeIsOpen: boolean;
-    setNoticeIsOpen: Dispatch<SetStateAction<boolean>>;
-}
+export default function OrderForm() {
+    const { store, count } = useAppSelector((state) => state.order);
+    const { cart, total, noticeIsOpen } = useAppSelector((state) => state.cart);
 
-export default function OrderForm({ setFormIsOpen, setModalIsOpen, total, count, setCount, noticeIsOpen, setNoticeIsOpen }: IOrderFormProps) {
-    const { cart, store } = useAppSelector((state) => state.products);
     const [missed, setMissed] = useState<Product[]>([]);
 
     const formRef = useRef<HTMLFormElement>(null);
@@ -25,13 +21,9 @@ export default function OrderForm({ setFormIsOpen, setModalIsOpen, total, count,
     const dispatch = useAppDispatch();
     const missedArr: Product[] = [];
 
-    useEffect(() => {
-        console.log(missed);
-    }, [missed]);
-
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        setCount(count + 1);
+        dispatch(setCount(count + 1));
         if (!formRef.current) return;
 
         const formData = new FormData(formRef.current);
@@ -41,7 +33,7 @@ export default function OrderForm({ setFormIsOpen, setModalIsOpen, total, count,
             data[key] = value.toString();
         });
 
-        console.log("Form data:", data);
+        // console.log("Form data:", data);
 
         const order: Order = {
             id: count,
@@ -55,7 +47,6 @@ export default function OrderForm({ setFormIsOpen, setModalIsOpen, total, count,
                 if (prod.id === product.id) {
                     if (prod.quantity && product.quantity) {
                         if (product.quantity >= prod.quantity) {
-                            console.log(true);
                             return true;
                         } else {
                             missedArr.push(prod);
@@ -69,19 +60,25 @@ export default function OrderForm({ setFormIsOpen, setModalIsOpen, total, count,
 
         if (missedArr.length === 0) {
             dispatch(formOrder(order));
-            setFormIsOpen(false);
-            setModalIsOpen(false);
+            dispatch(addOrder());
+            dispatch(getPopularCategories(order.products));
+            dispatch(setFormIsOpen(false));
+            dispatch(setModalIsOpen(false));
             dispatch(clearCart());
             navigate("/orders");
         } else {
-            setNoticeIsOpen(true);
+            dispatch(setNoticeIsOpen(true));
         }
     };
+
+    useEffect(() => {
+        dispatch(getTotal());
+    }, [cart]);
 
     return (
         <>
             {noticeIsOpen ? (
-                <Notice missed={missed} setNoticeIsOpen={setNoticeIsOpen} />
+                <MissingProdNotice missed={missed} />
             ) : (
                 <div className="my-modal__order order">
                     <h2 className="order__title">Оформление заказа</h2>

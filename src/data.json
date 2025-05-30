@@ -978,5 +978,113 @@
             "name": "гарнитуры",
             "src": "https://cdn.citilink.ru/xJlyov7U6l4fImMHxuwIThB1nWsaeSmUuiuG-uUgRqk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d5991a1b-0d48-4c89-b05e-213691c2bc7d.jpg"
         }
+    ],
+    "categoryGroups": [
+        {
+            "groupId": 1,
+            "groupName": "Ноутбуки, планшеты и аксессуары",
+            "categoriesList": [
+                {
+                    "id": 2,
+                    "name": "ноутбуки",
+                    "src": "https://cdn.citilink.ru/6j84rvoxR2vC89v8KcNTMP3a6zdIWWzyueFMluFi0lE/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/f642473d-2ff7-431b-9b72-7c3ff32eb21c.jpg"
+                },
+                {
+                    "id": 10,
+                    "name": "планшеты",
+                    "src": "https://cdn.citilink.ru/5xJNbrWYZF9EXAUKsRJJdHK2yjHPOrrJmI4_6TrwHoQ/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/de62eae5-529d-44b8-83e6-6a6ecb70ea30.jpg"
+                },
+                {
+                    "id": 11,
+                    "name": "хабы",
+                    "src": "https://cdn.citilink.ru/_xtb1IrCWO2xkh-PoUVG4P2XsmVx4tDnW7yAZqGzcX0/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/069dcf4e-597f-4757-95aa-21efb5ae67b2.jpg"
+                }
+            ]
+        },
+        {
+            "groupId": 2,
+            "groupName": "Телевизоры",
+            "categoriesList": [
+                {
+                    "id": 5,
+                    "name": "телевизоры",
+                    "src": "https://cdn.citilink.ru/uroD4gmcgkEWHNys2MAFBvw0xQ7oCNjzwRbGjObBJ2o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/01d81ca4-5e64-4edb-bf5e-b95ab3fcc108.jpg"
+                }
+            ]
+        },
+        {
+            "groupId": 3,
+            "groupName": "Смартфоны, гаджеты, аксессуары",
+            "categoriesList": [
+                {
+                    "id": 1,
+                    "name": "смартфоны",
+                    "src": "https://cdn.citilink.ru/NAwj9b6UzrNFyzKMUkARXgQLKrl7JZl_yPf4Hzea0EY/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/96b3420f-d861-4a63-a0e1-42d19a7f352e.jpg"
+                },
+                {
+                    "id": 15,
+                    "name": "гарнитуры",
+                    "src": "https://cdn.citilink.ru/xJlyov7U6l4fImMHxuwIThB1nWsaeSmUuiuG-uUgRqk/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/d5991a1b-0d48-4c89-b05e-213691c2bc7d.jpg"
+                }
+            ]
+        },
+        {
+            "groupId": 4,
+            "groupName": "Мониторы, проекторы",
+            "categoriesList": [
+                {
+                    "id": 3,
+                    "name": "мониторы",
+                    "src": "https://cdn.citilink.ru/I_SzxQBUeanAvY4huu7YlTFQ5mWTdkHQd1_M0joJTn8/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/68136a8d-b1c5-465a-83a2-55b1079050fb.jpg"
+                },
+                {
+                    "id": 4,
+                    "name": "проекторы",
+                    "src": "https://cdn.citilink.ru/Tjz6M0V600Gs0xP8vuVpLY1-B5_7fUfk3hEXHGf3kyc/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/8da41035-6dec-4b93-9fe0-684e7e0fc603.jpg"
+                }
+            ]
+        },
+        {
+            "groupId": 5,
+            "groupName": "Аудио-техника",
+            "categoriesList": [
+                {
+                    "id": 6,
+                    "name": "музыкальные центры",
+                    "src": "https://cdn.citilink.ru/8xWCznufvtrwiKD1khB3KNbEkcRjXePHZlFqMfVNW8o/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/016dc672-8d25-4d74-ada7-1d31fc63f8e4.jpg"
+                },
+                {
+                    "id": 8,
+                    "name": "саундбары",
+                    "src": "https://cdn.citilink.ru/R3Wgo0-zbJ5B4zCCWGr6JDbs2T9WP7A77fsaa9rTc0E/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/c1f79f4a-4fb8-40b8-af11-2bca973cfa09.jpg"
+                },
+                {
+                    "id": 9,
+                    "name": "микрофоны",
+                    "src": "https://cdn.citilink.ru/8--xDw9Kk4lXXnPABYEL71C9CZeNEPwlZEx0SQXbR78/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/ab78cb74-266a-4b95-aab6-65cf9c7d1564.jpg"
+                }
+            ]
+        },
+        {
+            "groupId": 6,
+            "groupName": "Комплектующие",
+            "categoriesList": [
+                {
+                    "id": 12,
+                    "name": "материнские платы",
+                    "src": "https://cdn.citilink.ru/DtVZ77a15TXvHf58JBjwYFvJySuWa2TGFlHbSZD_SWE/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/00093117-b10c-465f-b102-afc28346ae84.jpg"
+                },
+                {
+                    "id": 13,
+                    "name": "видеокарты",
+                    "src": "https://cdn.citilink.ru/rqmiY2OTGSHenH22_PjLpJ6wj1Oj6gfhcszH4ggGw2Y/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/b810624c-fc8e-4ede-bb09-bad449ecc6ba.jpg"
+                },
+                {
+                    "id": 14,
+                    "name": "вебкамеры",
+                    "src": "https://cdn.citilink.ru/yZ8rbVKU2n5DzBS9pvpTht9yoKBX-HlVn0g7WoWWP44/resizing_type:fit/gravity:sm/width:400/height:400/plain/product-images/4bc4f964-7247-4b9f-ac8e-2325561e0fb2.jpg"
+                }
+            ]
+        }
     ]
 }

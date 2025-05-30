@@ -3,52 +3,46 @@ import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Accordion from "react-bootstrap/Accordion";
 import Slider from "@mui/material/Slider";
-import { useAppSelector } from "../hooks/hooks";
-import { Dispatch, SetStateAction, useState } from "react";
-import { Feat, FilterFeature } from "../types";
-import { ru } from "../aliases";
+import { useAppSelector } from "../../hooks/hooks";
+import { FilterFeature } from "../../types";
+import { ru } from "../../aliases";
+import { setPriceValues, setRangeValues, setFeatureValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
+import { useDispatch } from "react-redux";
 
-interface ISidebarProps {
-    rangeValues: number[];
-    setRangeValues: Dispatch<SetStateAction<number[]>>;
-    priceValues: number[];
-    setPriceValues: Dispatch<SetStateAction<number[]>>;
-    searchFilter: FilterFeature;
-    setSearchFilter: Dispatch<SetStateAction<FilterFeature>>;
-    featureValues: Feat | undefined;
-    setFeatureValues: Dispatch<SetStateAction<Feat | undefined>>;
-}
-
-export default function Sidebar({ rangeValues, setRangeValues, priceValues, setPriceValues, searchFilter, setSearchFilter, featureValues, setFeatureValues }: ISidebarProps) {
+export default function Sidebar() {
+    const { priceValues, rangeValues, featureValues, searchFilter, searchValue, emptyFilter } = useAppSelector((state) => state.filter);
     const { filteredByCategory, maxPrice } = useAppSelector((state) => state.products);
-    const [searchValue, setSearchValue] = useState("");
-    const [emptyFilter, setEmptyFilter] = useState(false);
+    const dispatch = useDispatch();
 
     const valuesArr: string[] = [];
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-        setSearchValue(e.target.value);
+        dispatch(setSearchValue(e.target.value));
     }
     const handleRangeChange = (event: Event, newValue: number[]) => {
-        setRangeValues(newValue);
-        setPriceValues(newValue);
+        dispatch(setRangeValues(newValue));
+        dispatch(setPriceValues(newValue));
     };
 
     function handlePriceChange(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.name === "min_value") {
-            setPriceValues(
-                priceValues.map((el, i) => {
-                    if (i === 0) return +e.target.value;
-                    return el;
-                })
+            dispatch(
+                setPriceValues(
+                    priceValues.map((el, i) => {
+                        if (i === 0) return +e.target.value;
+                        return el;
+                    })
+                )
             );
         }
         if (e.target.name === "max_value") {
-            setPriceValues(
-                priceValues.map((el, i) => {
-                    if (i === 1) return +e.target.value;
-                    return el;
-                })
+            dispatch(
+                setPriceValues(
+                    priceValues.map((el, i) => {
+                        if (i === 1) return +e.target.value;
+                        return el;
+                    })
+                )
             );
         }
     }
@@ -57,16 +51,18 @@ export default function Sidebar({ rangeValues, setRangeValues, priceValues, setP
         if (e.target.dataset.name) {
             if (e.target.checked) {
                 if (featureValues && e.target.dataset.name in featureValues) {
-                    setFeatureValues({
-                        ...featureValues,
-                        [e.target.dataset.name]: featureValues[e.target.dataset.name].concat(e.target.name),
-                    });
+                    dispatch(
+                        setFeatureValues({
+                            ...featureValues,
+                            [e.target.dataset.name]: featureValues[e.target.dataset.name].concat(e.target.name),
+                        })
+                    );
                 } else {
-                    setFeatureValues({ ...featureValues, [e.target.dataset.name]: [e.target.name] });
+                    dispatch(setFeatureValues({ ...featureValues, [e.target.dataset.name]: [e.target.name] }));
                 }
             } else {
                 if (featureValues !== undefined) {
-                    setFeatureValues({ ...featureValues, [e.target.dataset.name]: featureValues[e.target.dataset.name].filter((el) => el !== e.target.name) });
+                    dispatch(setFeatureValues({ ...featureValues, [e.target.dataset.name]: featureValues[e.target.dataset.name].filter((el) => el !== e.target.name) }));
                 }
             }
         }
@@ -77,21 +73,21 @@ export default function Sidebar({ rangeValues, setRangeValues, priceValues, setP
         for (let key in copy) {
             copy[key] = true;
         }
-        setSearchFilter({ ...searchFilter, ...copy });
-        setSearchValue("");
-        setEmptyFilter(false);
+        dispatch(setSearchFilter({ ...searchFilter, ...copy }));
+        dispatch(setSearchValue(""));
+        dispatch(setEmptyFilter(false));
     }
 
     function submit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        setSearchFilter({ ...changeFeatStatus(searchFilter, searchValue.toLowerCase()) });
+        dispatch(setSearchFilter({ ...changeFeatStatus(searchFilter, searchValue.toLowerCase()) }));
 
         function changeFeatStatus(featuresObj: FilterFeature, value: string) {
             const copy = Object.assign({}, featuresObj);
             if (value === "цена") {
                 value = "price";
             } else {
-                for (let key in ru) {
+                for (const key in ru) {
                     if (value === ru[key]) {
                         value = key;
                         break;
@@ -99,7 +95,7 @@ export default function Sidebar({ rangeValues, setRangeValues, priceValues, setP
                 }
             }
             let i = 0;
-            for (let key in copy) {
+            for (const key in copy) {
                 if (key !== value) {
                     copy[key] = false;
                 } else {
@@ -108,14 +104,14 @@ export default function Sidebar({ rangeValues, setRangeValues, priceValues, setP
                 }
             }
             if (i === 0) {
-                setEmptyFilter(true);
+                dispatch(setEmptyFilter(true));
             } else {
-                setEmptyFilter(false);
+                dispatch(setEmptyFilter(false));
             }
 
             return copy;
         }
-        setSearchValue("");
+        dispatch(setSearchValue(""));
     }
 
     return (

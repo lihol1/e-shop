@@ -1,12 +1,13 @@
-import { useAppDispatch, useAppSelector } from "../hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { useEffect } from "react";
-import { arrangeByCategories } from "../store/productSlice";
-import "../styles/search.scss";
+import { arrangeByCategories } from "../../store/productSlice";
+import "../../styles/search.scss";
 import SearchItem from "./SearchItem";
 
 export default function SearchPage() {
     const dispatch = useAppDispatch();
-    const { searchList, categoryList, foundProducts } = useAppSelector((state) => state.products);
+    const { searchList, foundProducts } = useAppSelector((state) => state.products);
+    const { categoryList } = useAppSelector((state) => state.categories);
 
     useEffect(() => {
         dispatch(arrangeByCategories());
@@ -20,7 +21,7 @@ export default function SearchPage() {
                         {searchList.map((arr, i) => {
                             let targetCategory = categoryList?.find((cat) => cat.id === arr[0].categoryId);
                             let categoryName = targetCategory?.name ?? "";
-                            return <SearchItem categoryName={categoryName} arr={arr} index={i} key={i} />;
+                            return <SearchItem categoryName={categoryName} arr={arr} key={i} />;
                         })}
                     </>
                 ) : (

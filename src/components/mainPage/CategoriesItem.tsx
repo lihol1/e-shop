@@ -1,20 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Category } from "../types";
+import { Category } from "../../types";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
 
 type CategoriesItemProps = {
-    cat: Category;
+    category: Category;
 };
 
-export default function CategoriesItem({ cat }: CategoriesItemProps) {
+export default function CategoriesItem({ category }: CategoriesItemProps) {
     return (
-        <Link to={`category/${cat.id}`} className="categories__link">
+        <Link to={`category/${category.id}`} className="categories__link">
             <div className="categories__image">
-                <img src={cat.src} alt={cat.name} />
+                <img src={category.src} alt={category.name} />
             </div>
             <div className="categories__name-holder">
-                <h3 className="categories__name">{cat.name[0].toUpperCase() + cat.name.slice(1)}</h3>
+                <h3 className="categories__name">{category.name[0].toUpperCase() + category.name.slice(1)}</h3>
                 <FontAwesomeIcon icon={faArrowRight} />
             </div>
         </Link>

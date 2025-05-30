@@ -1,10 +1,11 @@
 import { Link } from "react-router";
-import { useAppSelector } from "../hooks/hooks";
-import "../styles/orders.scss";
+import { useAppSelector } from "../../hooks/hooks";
+import "../../styles/orders.scss";
 import OrderComponent from "./OrderComponent";
 
 export default function OrderPage() {
-    const { orders } = useAppSelector((state) => state.products);
+    const { orders } = useAppSelector((state) => state.order);
+
     return (
         <div className="page__orders orders">
             <h3>Заказы</h3>

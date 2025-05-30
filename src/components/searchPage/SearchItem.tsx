@@ -1,17 +1,16 @@
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Product } from "../types";
+import { Product } from "../../types";
 import SearchCategoryItem from "./SearchCategoryItem";
-import List from "./List";
+import List from "../List";
 
-interface ISearchItem {
+type SearchItemProps = {
     categoryName: string;
-    arr: Product[];
-    index: number;
+    arr: Product[];    
 }
 
-export default function SearchItem({ categoryName, arr }: ISearchItem) {
+export default function SearchItem({ categoryName, arr }: SearchItemProps) {
     return (
         <li className="search__item-main">
             <div className="search__top">

@@ -1,29 +1,24 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
-import Cart from "./Cart";
+import { useEffect, useRef } from "react";
+import Cart from "./cart/Cart";
 import "../styles/modal.scss";
 import CloseButton from "react-bootstrap/CloseButton";
-import OrderForm from "./OrderForm";
+import OrderForm from "./cart/OrderForm";
 import { useAppSelector } from "../hooks/hooks";
+import { changeCartStatus } from "../store/cartSlice";
+import { setNoticeIsOpen } from "../store/cartSlice";
+import { useDispatch } from "react-redux";
+import { setModalIsOpen } from "../store/generalSlice";
 
-type ModalProps = {
-    setModalIsOpen: Dispatch<SetStateAction<boolean>>;
-    setCartIsOpen: Dispatch<SetStateAction<boolean>>;
-    cartIsOpen: boolean;
-    count: number;
-    setCount: Dispatch<SetStateAction<number>>;
-};
-
-export default function Modal({ setModalIsOpen, setCartIsOpen, cartIsOpen, count, setCount }: ModalProps) {
-    const { cart } = useAppSelector((state) => state.products);
+export default function Modal() {
+    const { cartIsOpen } = useAppSelector((state) => state.cart);
+    const { formIsOpen } = useAppSelector((state) => state.general);
     const refModal = useRef(null);
-    const [formIsOpen, setFormIsOpen] = useState(false);
-    const [total, setTotal] = useState<number>(0);
-    const [noticeIsOpen, setNoticeIsOpen] = useState(false);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         function checkIfClickedOutside(e: MouseEvent) {
             if (refModal.current && refModal.current === e.target) {
-                setModalIsOpen(false);
+                dispatch(setModalIsOpen(false));
             }
         }
         document.addEventListener("click", checkIfClickedOutside);
@@ -33,35 +28,20 @@ export default function Modal({ setModalIsOpen, setCartIsOpen, cartIsOpen, count
     }, []);
 
     function clickHandler() {
-        setCartIsOpen(false);
-        setModalIsOpen(false);
-        setNoticeIsOpen(false);
-    }
-
-    useEffect(() => {
-        setTotal(getTotal());
-    }, [cart]);
-
-    function getTotal(): number {
-        if (cart.length > 0) {
-            return cart.reduce((sum, prod) => {
-                return sum + prod.price * (prod.quantity ?? 1);
-            }, 0);
-        }
-        return 0;
+        dispatch(changeCartStatus(false));
+        dispatch(setModalIsOpen(false));
+        dispatch(setNoticeIsOpen(false));
     }
 
     return (
-        <>
-            <div ref={refModal} className="page__modal my-modal">
-                <div className="my-modal__window">
-                    <div className="my-modal__close">
-                        <CloseButton onClick={clickHandler} />
-                    </div>
-                    {cartIsOpen && <Cart setCartIsOpen={setCartIsOpen} setFormIsOpen={setFormIsOpen} />}
-                    {formIsOpen && <OrderForm setFormIsOpen={setFormIsOpen} setModalIsOpen={setModalIsOpen} total={total} count={count} setCount={setCount} noticeIsOpen={noticeIsOpen} setNoticeIsOpen={setNoticeIsOpen} />}
+        <div ref={refModal} className="page__modal my-modal">
+            <div className="my-modal__window">
+                <div className="my-modal__close">
+                    <CloseButton onClick={clickHandler} />
                 </div>
+                {cartIsOpen && <Cart />}
+                {formIsOpen && <OrderForm />}
             </div>
-        </>
+        </div>
     );
 }

@@ -1,17 +1,17 @@
-import { Product } from "../types";
+import { Product } from "../../types";
 
 type NoticeItemProps = {
-    prod: Product;
+    product: Product;
 };
 
-export default function NoticeItem({ prod }: NoticeItemProps) {
+export default function NoticeItem({ product }: NoticeItemProps) {
     return (
         <>
             <div className="notice__left">
                 <div className="notice__image">
-                    <img src={prod.src} alt={prod.name} />
+                    <img src={product.src} alt={product.name} />
                 </div>
-                <div className="notice__name">{prod.name}</div>
+                <div className="notice__name">{product.name}</div>
             </div>
             <div className="notice__text">
                 <p> На складе нет необходимого количества данного товара. Попробуйте сделать заказ позже.</p>
