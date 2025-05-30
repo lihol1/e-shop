@@ -1,39 +1,68 @@
-import React from 'react'
 import "../styles/header.scss";
-import { NavLink, Link } from "react-router";
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faMagnifyingGlass  } from "@fortawesome/free-solid-svg-icons";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router";
+import { faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { searchProducts } from "../store/productSlice";
+import { useAppDispatch, useAppSelector } from "../hooks/hooks";
+import Catalog from "./catalog/Catalog";
+import { changeCartStatus } from "../store/cartSlice";
+import { setCatalogIsOpen, setHeaderSearchValue, setModalIsOpen } from "../store/generalSlice";
 
 export default function Header() {
-  return (
-  <div className='header'>
-    <Container fluid className="p-4">
-      <Row className="d-flex align-items-center">
-        <Col>  
-            <Button className="w-100" variant="primary" >Каталог</Button>
-        </Col>
-        <Col xs={8} className="header__search">
-            <Form.Control type="search" placeholder='Поиск по товарам' className="pe-5"></Form.Control> 
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="header__icon header__icon--search" />
-        </Col>
-        <Col>
-            <div className="header__cart">
-                <FontAwesomeIcon icon={faCartShopping} className="header__icon"/>
-            </div>
-        </Col>
+    const { catalogIsOpen, headerSearchValue } = useAppSelector((state) => state.general);
+    const navigate = useNavigate();
+    const dispatch = useAppDispatch();
 
-            {/* <NavLink to="/" className={({ isActive }) => isActive ? "active" : "" }>Home</NavLink>      
-            <NavLink to="/category" className={({ isActive }) => isActive ? "active" : "" }>Category</NavLink>
-            <NavLink to="/order" className={({ isActive }) => isActive ? "active" : "" }>Orders</NavLink>    
-            <NavLink to="/search" className={({ isActive }) => isActive ? "active" : "" }>Search</NavLink>    */}
-        
-        </Row>
-    </Container>
-    </div>
-  )
+    function searchHandler() {
+        dispatch(searchProducts(headerSearchValue));
+        navigate("/search");
+    }
+
+    function changeHandler(e: React.ChangeEvent<HTMLInputElement>) {
+        dispatch(setHeaderSearchValue(e.target.value));
+    }
+
+    function submit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        searchHandler();
+    }
+    function clickHandler() {
+        dispatch(setCatalogIsOpen(!catalogIsOpen));
+    }
+
+    function cartClickHandler() {
+        dispatch(setModalIsOpen(true));
+        dispatch(changeCartStatus(true));
+    }
+
+    return (
+        <div className="page__header header">
+            <Container fluid className="p-4">
+                <Row className="d-flex align-items-center justify-content-between">
+                    <Col>
+                        <Button className="w-100 btn-blue" variant="primary" onClick={clickHandler}>
+                            Каталог
+                        </Button>
+                        <Catalog />
+                    </Col>
+                    <Col xs={8} className="header__search">
+                        <form onSubmit={submit}>
+                            <Form.Control type="search" placeholder="Поиск по товарам" className="pe-5" value={headerSearchValue} onChange={changeHandler}></Form.Control>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} className="header__icon header__icon--search" onClick={searchHandler} />
+                        </form>
+                    </Col>
+                    <Col>
+                        <div className="header__cart">
+                            <FontAwesomeIcon icon={faCartShopping} className="header__icon" onClick={cartClickHandler} />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
+    );
 }
