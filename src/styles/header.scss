@@ -1,24 +1,98 @@
 .header {
     width: 100%;
     background-color: var(--blue);
-}
-.header__search{
-    position: relative;
+
+    &__search {
+        position: relative;
+    }
+    &__cart {
+        text-align: center;
+    }
+    &__icon {
+        color: #fff;
+        width: 30px;
+        height: 30px;
+    }
+    &__icon--search {
+        position: absolute;
+        top: 50%;
+        right: 3%;
+        transform: translateY(-50%);
+        color: var(--blue);
+    }
+    &__catalog-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    &__catalog {
+        position: fixed;
+        height: 100vh;
+        min-width: 20%;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        padding: 40px 40px;
+    }
 }
 
-// .form-control{
-//     position: relative;
+.catalog {
+    border-bottom: 1px solid #afadad;
+    border-right: 1px solid #afadad;
 
-// }
-.header__icon {
-    color: #fff;
-    width: 30px;
-    height: 30px;
-}
-.header__icon--search {
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-    color: var(--blue);
+    &__title {
+        padding-left: 28px;
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        padding: 8px 0px;
+        font-size: 14px;
+        cursor: pointer;
+        &:hover {
+            & .catalog__arrow {
+                opacity: 1;
+            }
+        }
+    }
+    &__arrow {
+        opacity: 0;
+        margin-left: 10px;
+        font-size: 12px;
+        transition: opacity 0.2s ease;
+    }
+    &__btn {
+        width: 100%;
+        text-align: left;
+        color: #000;
+    }
+    &__subcatalog {
+        position: absolute;
+        min-width: 400px;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        background-color: #fff;
+        padding: 55px 20px 20px;
+        border-left: 1px solid #e2e2e2;
+        border-right: 1px solid #afadad;
+        border-bottom: 1px solid #afadad;
+    }
+    .subcatalog__list {
+        font-size: 14px;
+        padding-left: 0;
+    }
+    .subcatalog__subtitle {
+        font-size: 16px;
+        margin-bottom: 35px;
+    }
+    .subcatalog__item {
+        padding: 5px 10px;
+        &:hover {
+            background-color: #dbdada;
+        }
+    }
 }
