@@ -14,13 +14,9 @@ export default function OrderPage() {
             </div>
 
             <ul className="orders__list">
-                {orders.map((order) => {
-                    return (
-                        <li key={order.id} className="orders__list-item">
-                            <OrderComponent order={order} />
-                        </li>
-                    );
-                })}
+                {orders.map((order) => (
+                    <OrderComponent key={order.id} order={order} />
+                ))}
             </ul>
         </div>
     );

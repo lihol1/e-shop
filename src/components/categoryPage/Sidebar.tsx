@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Accordion from "react-bootstrap/Accordion";
 import Slider from "@mui/material/Slider";
 import { useAppSelector } from "../../hooks/hooks";
-import { FilterFeature } from "../../types";
+import { FilterFeature } from "../../utils/types";
 import { ru } from "../../aliases";
 import { setPriceValues, setRangeValues, setFeatureValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
 import { useDispatch } from "react-redux";
+import AccordionElement from "./AccordionElement";
 
 export default function Sidebar() {
     const { priceValues, rangeValues, featureValues, searchFilter, searchValue, emptyFilter } = useAppSelector((state) => state.filter);
@@ -156,18 +157,10 @@ export default function Sidebar() {
                                     <Accordion.Item eventKey={String(ind)} key={ind} className="sidebar__acc-item">
                                         <Accordion.Header className="sidebar__acc-header">{ru[feat][0].toUpperCase() + ru[feat].slice(1)}</Accordion.Header>
                                         <Accordion.Body className="sidebar__acc-body">
-                                            {filteredByCategory.map((prod, i) => {
-                                                if (!valuesArr.includes(prod.features[feat])) {
-                                                    valuesArr.push(prod.features[feat]);
-                                                    return (
-                                                        <div key={i}>
-                                                            <input type="checkbox" id={prod.features[feat]} name={prod.features[feat]} data-name={feat} onChange={handleFeatureChange} />
-
-                                                            <label htmlFor={feat} className="sidebar__feat">
-                                                                {prod.features[feat]}
-                                                            </label>
-                                                        </div>
-                                                    );
+                                            {filteredByCategory.map((product, i) => {
+                                                if (!valuesArr.includes(product.features[feat])) {
+                                                    valuesArr.push(product.features[feat]);
+                                                    return <AccordionElement key={i} feat={feat} feature={product.features[feat]} handleFeatureChange={handleFeatureChange} />;
                                                 }
                                                 return;
                                             })}

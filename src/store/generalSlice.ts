@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { GeneralState, Iprops } from "../types";
+import { GeneralState, IProps } from "../utils/types";
 
 const initialState: GeneralState = {
     currentPage: 1,

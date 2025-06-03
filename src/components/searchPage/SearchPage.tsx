@@ -19,8 +19,8 @@ export default function SearchPage() {
                 {searchList.length > 0 ? (
                     <>
                         {searchList.map((arr, i) => {
-                            let targetCategory = categoryList?.find((cat) => cat.id === arr[0].categoryId);
-                            let categoryName = targetCategory?.name ?? "";
+                            const targetCategory = categoryList?.find((cat) => cat.id === arr[0].categoryId);
+                            const categoryName = targetCategory?.name ?? "";
                             return <SearchItem categoryName={categoryName} arr={arr} key={i} />;
                         })}
                     </>

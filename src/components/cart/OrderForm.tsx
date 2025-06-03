@@ -1,7 +1,7 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router";
-import { Order, Product } from "../../types";
+import { formField, Order, Product } from "../../utils/types";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { addOrder, formOrder } from "../../store/orderSlice";
 import { clearCart, setNoticeIsOpen, getTotal } from "../../store/cartSlice";
@@ -9,19 +9,30 @@ import { setCount } from "../../store/orderSlice";
 import { setFormIsOpen, setModalIsOpen } from "../../store/generalSlice";
 import MissingProdNotice from "./MissingProdNotice";
 import { getPopularCategories } from "../../store/categorySlice";
+import FormElement from "./FormElement";
+import List from "../List";
 
 export default function OrderForm() {
     const { store, count } = useAppSelector((state) => state.order);
-    const { cart, total, noticeIsOpen } = useAppSelector((state) => state.cart);
+    const { orderedProducts, total, noticeIsOpen } = useAppSelector((state) => state.cart);
 
-    const [missed, setMissed] = useState<Product[]>([]);
+    const [missedProducts, setMissedProducts] = useState<Product[]>([]);
 
     const formRef = useRef<HTMLFormElement>(null);
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
-    const missedArr: Product[] = [];
+
+    const formFields: formField[] = [
+        { name: "name", placeholder: "Имя", text: "Имя" },
+        { name: "surnname", placeholder: "Фамилия", text: "Фамилия" },
+        { name: "telephone", placeholder: "Телефон", text: "Телефон" },
+        { name: "phone", placeholder: "Телефон", text: "Телефон, если не дозвонимся" },
+        { name: "city", placeholder: "Город", text: "Город" },
+        { name: "street", placeholder: "Улица", text: "Улица" },
+    ];
 
     const handleSubmit = (e: React.FormEvent) => {
+        const missedProductsArr: Product[] = [];
         e.preventDefault();
         dispatch(setCount(count + 1));
         if (!formRef.current) return;
@@ -39,7 +50,7 @@ export default function OrderForm() {
             id: count,
             author: formData.get("surnname") + " " + formData.get("name"),
             orderTotal: total,
-            products: cart,
+            products: orderedProducts,
         };
 
         order.products.forEach((prod) => {
@@ -49,16 +60,16 @@ export default function OrderForm() {
                         if (product.quantity >= prod.quantity) {
                             return true;
                         } else {
-                            missedArr.push(prod);
+                            missedProductsArr.push(prod);
                             return false;
                         }
                     }
                 }
             });
         });
-        setMissed([...missedArr]);
+        setMissedProducts([...missedProductsArr]);
 
-        if (missedArr.length === 0) {
+        if (missedProductsArr.length === 0) {
             dispatch(formOrder(order));
             dispatch(addOrder());
             dispatch(getPopularCategories(order.products));
@@ -73,63 +84,21 @@ export default function OrderForm() {
 
     useEffect(() => {
         dispatch(getTotal());
-    }, [cart]);
+    }, [orderedProducts]);
 
     return (
         <>
             {noticeIsOpen ? (
-                <MissingProdNotice missed={missed} />
+                <MissingProdNotice missed={missedProducts} />
             ) : (
                 <div className="my-modal__order order">
                     <h2 className="order__title">Оформление заказа</h2>
-                    <form ref={formRef} className="order__form" onSubmit={handleSubmit}>
-                        <fieldset className="order__fieldset">
-                            <legend className="order__legend">Получатель</legend>
-                            <div className="order__list">
-                                <div className="order__item">
-                                    <label htmlFor="name" className="order__label">
-                                        Имя&#42;
-                                    </label>
-                                    <input type="text" id="name" name="name" placeholder="Имя" />
-                                </div>
-
-                                <div className="order__item">
-                                    <label htmlFor="surnname" className="order__label">
-                                        Фамилия&#42;
-                                    </label>
-                                    <input type="text" id="surnname" name="surnname" placeholder="Фамилия" />
-                                </div>
-
-                                <div className="order__item">
-                                    <label htmlFor="telephone" className="order__label">
-                                        Телефон&#42;
-                                    </label>
-                                    <input type="text" id="telephone" name="telephone" placeholder="Телефон" />
-                                </div>
-
-                                <div className="order__item">
-                                    <label htmlFor="phone" className="order__label">
-                                        Телефон, если не дозвонимся
-                                    </label>
-                                    <input type="text" id="phone" name="phone" placeholder="Телефон" />
-                                </div>
-
-                                <div className="order__item">
-                                    <label htmlFor="city" className="order__label">
-                                        Город&#42;
-                                    </label>
-                                    <input type="text" id="city" name="city" placeholder="Город" />
-                                </div>
-
-                                <div className="order__item">
-                                    <label htmlFor="street" className="order__label">
-                                        Улица&#42;
-                                    </label>
-                                    <input type="text" id="street" name="street" placeholder="Улица" />
-                                </div>
-                            </div>
+                    <form ref={formRef} className="order__form form-order" onSubmit={handleSubmit}>
+                        <fieldset className="form-order__fieldset">
+                            <legend className="form-order__legend">Получатель</legend>
+                            <List items={formFields} renderItem={(field) => <FormElement name={field.name} placeholder={field.placeholder} text={field.text} />} className="form-order" />
                         </fieldset>
-                        <div className="order__btn-block">
+                        <div className="form-order__btn-block">
                             <Button as="input" type="submit" value="Оформить заказ" variant="outline-primary" className="order__button" />
                         </div>
                     </form>

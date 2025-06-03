@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import "../../styles/categories.scss";
 import List from "../List";
 import CategoriesItem from "./CategoriesItem";
-import { Category } from "../../types";
+import { Category } from "../../utils/types";
 import { useEffect } from "react";
 import { getTenPopularCategories } from "../../store/categorySlice";
 

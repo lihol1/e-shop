@@ -1,12 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Data, Order, OrderState  } from "../types";
+import { Data, Order, OrderState } from "../utils/types";
 import * as productData from "../data.json";
 
 const data = productData as unknown as Data;
 const storeData = data.products.map((prod) => {
     return { ...prod, quantity: 3 };
 });
-
 
 const defaultValues = {
     id: 0,
@@ -44,8 +43,8 @@ export const orderSlice = createSlice({
             }
         },
         setCount: (state, { payload }: PayloadAction<number>) => {
-            state.count =  payload
-        }
+            state.count = payload;
+        },
     },
 });
 

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Product } from "../../types";
+import { Product } from "../../utils/types";
 import { faRubleSign, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "../../hooks/hooks";
 import { addItemToCart, removeItemFromCart } from "../../store/cartSlice";
@@ -8,10 +8,10 @@ type CartItemProps = {
     prod: Product;
 };
 
-const CartItem = ({prod}:CartItemProps) => {
-    let formatter = new Intl.NumberFormat("ru");
+const CartItem = ({ prod }: CartItemProps) => {
+    const formatter = new Intl.NumberFormat("ru");
     const dispatch = useAppDispatch();
-    
+
     function changeQuantity(item: Product, quantity: number) {
         dispatch(addItemToCart({ ...item, quantity }));
     }

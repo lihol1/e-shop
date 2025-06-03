@@ -1,9 +1,9 @@
-import { Category } from "../../types";
+import { Category } from "../../utils/types";
 
 type SubmenuItemProps = {
     category: Category;
     redirect: (id: number) => void;
-}
+};
 
 export default function SubmenuItem({ category, redirect }: SubmenuItemProps) {
     return (

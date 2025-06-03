@@ -7,7 +7,7 @@ import { useAppSelector } from "../hooks/hooks";
 import { changeCartStatus } from "../store/cartSlice";
 import { setNoticeIsOpen } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
-import { setModalIsOpen } from "../store/generalSlice";
+import { setModalIsOpen, setFormIsOpen } from "../store/generalSlice";
 
 export default function Modal() {
     const { cartIsOpen } = useAppSelector((state) => state.cart);
@@ -31,6 +31,7 @@ export default function Modal() {
         dispatch(changeCartStatus(false));
         dispatch(setModalIsOpen(false));
         dispatch(setNoticeIsOpen(false));
+        dispatch(setFormIsOpen(false));
     }
 
     return (

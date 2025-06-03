@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CategoriesState, PopularCategory, Product } from "../types";
+import { CategoriesState, PopularCategory, Product } from "../utils/types";
 import * as data from "../data.json";
 
 const initialState: CategoriesState = {
@@ -23,10 +23,10 @@ export const categorySlice = createSlice({
         },
         getPopularCategories: (state, { payload }: PayloadAction<Product[]>) => {
             if (payload.length > 0) {
-                let categoriesArr: PopularCategory[] = [];
+                const categoriesArr: PopularCategory[] = [];
                 payload.forEach((prod) => {
                     if (prod.quantity) {
-                        categoriesArr.unshift({ categoryId: prod.categoryId, quantity: prod.quantity });
+                        categoriesArr.push({ categoryId: prod.categoryId, quantity: prod.quantity });
                     }
                 });
                 //сортируем по количеству заказанного товара
@@ -36,9 +36,9 @@ export const categorySlice = createSlice({
 
                 state.popularCategories = [...state.categoryList.filter((cat) => categoriesIdsUnique.includes(cat.id)), ...state.popularCategories];
                 //удаляем дубли
-                let idsArr = state.popularCategories.map((category) => category.id);
-                idsArr = [...new Set(idsArr)];
-                state.popularCategories = state.categoryList.filter((category) => idsArr.includes(category.id));
+                const idsArr = state.popularCategories.map((category) => category.id);
+                const uniqueIdsArr = [...new Set(idsArr)];
+                state.popularCategories = state.categoryList.filter((category) => uniqueIdsArr.includes(category.id));
             }
         },
         getTenPopularCategories: (state) => {
@@ -48,15 +48,15 @@ export const categorySlice = createSlice({
                 if (state.popularCategories.length > 0 && state.popularCategories.length < 10) {
                     const difference = 10 - state.popularCategories.length;
                     //избавляемся от  дублей
-                    let idsArr = state.popularCategories.map((category) => category.id);
-                    idsArr = [...new Set(idsArr)];
+                    const idsArr = state.popularCategories.map((category) => category.id);
+                    const uniqueIdsArr = [...new Set(idsArr)];
 
                     // дополняем до 10 штук
                     let i = 1;
                     const adds = state.renderList.filter((category) => {
                         if (category) {
                             if (i <= difference) {
-                                if (!idsArr.includes(category.id)) {
+                                if (!uniqueIdsArr.includes(category.id)) {
                                     i++;
                                     return true;
                                 }
@@ -73,7 +73,7 @@ export const categorySlice = createSlice({
             state.categoryId = payload;
         },
         setCategoryName: (state, { payload }: PayloadAction<string>) => {
-            state.categoryName = payload
+            state.categoryName = payload;
         },
     },
 });

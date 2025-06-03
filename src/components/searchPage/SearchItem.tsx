@@ -1,14 +1,14 @@
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Product } from "../../types";
+import { Product } from "../../utils/types";
 import SearchCategoryItem from "./SearchCategoryItem";
 import List from "../List";
 
 type SearchItemProps = {
     categoryName: string;
-    arr: Product[];    
-}
+    arr: Product[];
+};
 
 export default function SearchItem({ categoryName, arr }: SearchItemProps) {
     return (

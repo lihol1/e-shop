@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CartState, Product } from "../types";
+import { CartState, Product } from "../utils/types";
 
 const initialState: CartState = {
-    cart: [],
+    orderedProducts: [],
     cartIsOpen: false,
     total: 0,
     noticeIsOpen: false,
@@ -13,8 +13,8 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addItemToCart: (state, { payload }: PayloadAction<Product>) => {
-            let newCart = [...state.cart];
-            const found = state.cart.find((prod) => prod.id === payload.id);
+            let newCart = [...state.orderedProducts];
+            const found = state.orderedProducts.find((prod) => prod.id === payload.id);
             if (found) {
                 newCart = newCart.map((prod) => {
                     return prod.id === payload.id ? { ...prod, quantity: payload.quantity || (prod.quantity ?? 0) + 1 } : prod;
@@ -22,31 +22,28 @@ export const cartSlice = createSlice({
             } else {
                 newCart.push({ ...payload, quantity: 1 });
             }
-            state.cart = newCart;
+            state.orderedProducts = newCart;
         },
         removeItemFromCart: (state, { payload }: PayloadAction<number>) => {
-            state.cart = state.cart.filter(({ id }) => id !== payload);
+            state.orderedProducts = state.orderedProducts.filter(({ id }) => id !== payload);
         },
         clearCart: (state) => {
-            state.cart = [];
+            state.orderedProducts = [];
         },
         changeCartStatus: (state, { payload }: PayloadAction<boolean>) => {
             state.cartIsOpen = payload;
         },
-        getTotal: (state) => {            
-            if (state.cart.length > 0) {
-                state.cart.reduce((sum, prod) => {
-                   return state.total = sum + prod.price * (prod.quantity ?? 1);
+        getTotal: (state) => {
+            if (state.orderedProducts.length > 0) {
+                state.orderedProducts.reduce((sum, prod) => {
+                    return (state.total = sum + prod.price * (prod.quantity ?? 1));
                 }, 0);
             } else {
                 state.total = 0;
             }
         },
         setNoticeIsOpen: (state, { payload }: PayloadAction<boolean>) => {
-            state.cartIsOpen = payload;
-        },
-        setFormIsOpen: (state, { payload }: PayloadAction<boolean>) => {
-            state.cartIsOpen = payload;
+            state.noticeIsOpen = payload;
         },
     },
 });

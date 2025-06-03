@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router";
-import { filterByCategory, filterByParams, setRequestParams } from "../../store/productSlice";
-import { setCategoryId, setCategoryName } from "../../store/categorySlice";
+import { filterByCategory, filterByParams, getProducts, setRequestParams } from "../../store/productSlice";
+import { getCategories, setCategoryId, setCategoryName } from "../../store/categorySlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import "../../styles/category.scss";
 import "../../styles/sidebar.scss";
-import { Product } from "../../types";
+import { Product } from "../../utils/types";
 import Toast from "./ToastComponent";
 import Sidebar from "./Sidebar";
 import Pagination from "../pagination/Pagination";
@@ -13,6 +13,7 @@ import List from "../List";
 import CategoryPageItem from "./CategoryPageItem";
 import { setCurrentPage } from "../../store/generalSlice";
 import { setPriceValues, setRangeValues, setFilterFeatures, setSearchFilter } from "../../store/filterSlice";
+import { itemsPerPage } from "../../utils/constants";
 
 export default function CategoryPage() {
     const { filteredByCategory, filteredByParams, maxPrice, requestParams } = useAppSelector((state) => state.products);
@@ -25,24 +26,28 @@ export default function CategoryPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [list, setList] = useState<Product[] | null>([]);
 
-    const itemsPerPage = 3;
     const totalPages = list === null ? 1 : Math.ceil(list.length / itemsPerPage);
+
+    useEffect(() => {
+        dispatch(getProducts());
+        dispatch(getCategories());
+    }, []);
 
     function setCategoryData() {
         const catId = params.categoryId ? +params.categoryId : -1;
         dispatch(setCategoryId(catId));
         const category = categoryList.find((cat) => cat.id === catId);
         dispatch(setCategoryName(category?.name ?? ""));
-    }    
+    }
 
     useEffect(() => {
         const categoryId = params.categoryId ? +params.categoryId : -1;
         const page = searchParams.get("page");
-        if (!page) {           
+        if (!page) {
             //заменяем запись в истории браузера
             window.history.replaceState({}, "", `/category/${categoryId}?page=1`);
         }
-    }, []);   
+    }, []);
 
     useEffect(() => {
         const page = searchParams.get("page");
@@ -72,7 +77,7 @@ export default function CategoryPage() {
 
     useEffect(() => {
         if (filterFeatures) {
-            dispatch(setSearchFilter({ ...searchFilter, ...filterFeatures }))
+            dispatch(setSearchFilter({ ...searchFilter, ...filterFeatures }));
         }
     }, [filterFeatures]);
 
@@ -130,7 +135,7 @@ export default function CategoryPage() {
                     <p>По вашему запросу ничего не найдено</p>
                 ) : (
                     <>
-                        <List items={paginate(list)} renderItem={(prod: Product) => <CategoryPageItem prod={prod} />} className="category" />
+                        <List items={paginate(list)} renderItem={(product: Product) => <CategoryPageItem product={product} />} className="category" />
 
                         <Pagination totalPages={totalPages} />
                     </>

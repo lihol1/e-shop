@@ -6,13 +6,13 @@ export function search(list: Product[], string: string) {
     
     let arrByFeatures: Product[] = [];
 
-    const arrByName: Product[] = list.filter((prod: Product) => {
+    const arrByName: Product[] = list.filter((product: Product) => {
         if (splitArr.length === 1) {
-            return prod.name.toLowerCase().includes(string);
+            return product.name.toLowerCase().includes(string);
         } else {
             let i = 0;
-            for (let el of splitArr) {
-                if (prod.name.toLowerCase().includes(el)) {
+            for (const el of splitArr) {
+                if (product.name.toLowerCase().includes(el)) {
                     i++;
                 }
             }
@@ -23,10 +23,10 @@ export function search(list: Product[], string: string) {
     //смотрим по характеристикам либо в найденном, либо во всем списке
 
     if (arrByName.length > 0) {
-        arrByFeatures = arrByName.filter((prod) => {
-            for (let feat in prod.features) {
-                for (let el of splitArr) {
-                    if (prod.features[feat].toLowerCase().match(el)) {
+        arrByFeatures = arrByName.filter((product) => {
+            for (const feat in product.features) {
+                for (const el of splitArr) {
+                    if (product.features[feat].toLowerCase().match(el)) {
                         return true;
                     }
                 }
@@ -35,10 +35,10 @@ export function search(list: Product[], string: string) {
         if (arrByFeatures.length === 0) return arrByName;
         return arrByFeatures;
     } else {
-        arrByFeatures = list.filter((prod) => {
-            for (let feat in prod.features) {
-                for (let el of splitArr) {
-                    if (prod.features[feat].toLowerCase().match(el)) {
+        arrByFeatures = list.filter((product) => {
+            for (const feat in product.features) {
+                for (const el of splitArr) {
+                    if (product.features[feat].toLowerCase().match(el)) {
                         return true;
                     }
                 }

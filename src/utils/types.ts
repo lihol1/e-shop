@@ -40,10 +40,10 @@ export type CategoriesState = {
 };
 
 export type CartState = {
-    cart: Product[];
+    orderedProducts: Product[];
     cartIsOpen: boolean;
     total: number;
-    noticeIsOpen: false;
+    noticeIsOpen: boolean;
 };
 
 export type OrderState = {
@@ -57,7 +57,7 @@ export type GeneralState = {
     currentPage: number;
     catalogIsOpen: boolean;
     submenuIsOpen: boolean;
-    currentProps: Iprops;
+    currentProps: IProps;
     headerSearchValue: string;
     isShown: boolean;
     formIsOpen: boolean;
@@ -68,7 +68,7 @@ export type FilterState = {
     priceValues: number[];
     rangeValues: number[];
     featureValues: Feat | undefined;
-    filterFeatures: {} | FilterFeature;
+    filterFeatures: FilterFeature;
     searchFilter: FilterFeature;
     searchValue: string,
     emptyFilter: boolean
@@ -82,10 +82,10 @@ export type CategoryGroup = {
 export type RequestParams = {
     min: number;
     max: number;
-    features: {} | Feat;
+    features: Feat;
 };
 
-export interface Iprops {
+export interface IProps {
     title: string;
     list: Category[];
 }
@@ -115,6 +115,12 @@ export type PopularCategory = {
 export type Aliases = {
     [key: string]: string;
 };
+
+export type formField = {
+    name: string,
+    placeholder: string,
+    text: string,
+}
 
 type OrderValues = {
     id: number;

@@ -1,4 +1,4 @@
-import { Product } from "../../types";
+import { Product } from "../../utils/types";
 import { Button } from "react-bootstrap";
 import NoticeItem from "./NoticeItem";
 import List from "../List";
