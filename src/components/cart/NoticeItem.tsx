@@ -1,4 +1,4 @@
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 
 type NoticeItemProps = {
     product: Product;

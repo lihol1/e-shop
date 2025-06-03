@@ -1,4 +1,4 @@
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
 

@@ -2,7 +2,7 @@ import { useAppSelector, useAppDispatch } from "../../hooks/hooks";
 import Button from "react-bootstrap/Button";
 import { changeCartStatus, clearCart } from "../../store/cartSlice";
 import List from "../List";
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import CartItem from "./CartItem";
 import { setFormIsOpen } from "../../store/generalSlice";
 

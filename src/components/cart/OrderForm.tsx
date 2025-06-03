@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router";
-import { formField, Order, Product } from "../../utils/types";
+import { formField, Order, Product } from "../../common/types";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { addOrder, formOrder } from "../../store/orderSlice";
 import { clearCart, setNoticeIsOpen, getTotal } from "../../store/cartSlice";
@@ -12,6 +12,15 @@ import { getPopularCategories } from "../../store/categorySlice";
 import FormElement from "./FormElement";
 import List from "../List";
 
+const formFields: formField[] = [
+    { name: "name", placeholder: "Имя", text: "Имя" },
+    { name: "surnname", placeholder: "Фамилия", text: "Фамилия" },
+    { name: "telephone", placeholder: "Телефон", text: "Телефон" },
+    { name: "phone", placeholder: "Телефон", text: "Телефон, если не дозвонимся" },
+    { name: "city", placeholder: "Город", text: "Город" },
+    { name: "street", placeholder: "Улица", text: "Улица" },
+];
+
 export default function OrderForm() {
     const { store, count } = useAppSelector((state) => state.order);
     const { orderedProducts, total, noticeIsOpen } = useAppSelector((state) => state.cart);
@@ -21,15 +30,6 @@ export default function OrderForm() {
     const formRef = useRef<HTMLFormElement>(null);
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
-
-    const formFields: formField[] = [
-        { name: "name", placeholder: "Имя", text: "Имя" },
-        { name: "surnname", placeholder: "Фамилия", text: "Фамилия" },
-        { name: "telephone", placeholder: "Телефон", text: "Телефон" },
-        { name: "phone", placeholder: "Телефон", text: "Телефон, если не дозвонимся" },
-        { name: "city", placeholder: "Город", text: "Город" },
-        { name: "street", placeholder: "Улица", text: "Улица" },
-    ];
 
     const handleSubmit = (e: React.FormEvent) => {
         const missedProductsArr: Product[] = [];

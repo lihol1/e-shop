@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Data, Order, OrderState } from "../utils/types";
+import { Data, Order, OrderState } from "../common/types";
 import * as productData from "../data.json";
 
 const data = productData as unknown as Data;

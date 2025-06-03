@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Category } from "../../utils/types";
+import { Category } from "../../common/types";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
 

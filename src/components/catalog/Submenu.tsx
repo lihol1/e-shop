@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAppSelector } from "../../hooks/hooks";
-import { Category } from "../../utils/types";
+import { Category } from "../../common/types";
 import SubmenuItem from "./SubmenuItem";
 import List from "../List";
 

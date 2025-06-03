@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import { faCartShopping, faRubleSign } from "@fortawesome/free-solid-svg-icons";
 import { addItemToCart } from "../../store/cartSlice";
 import { setIsShown } from "../../store/generalSlice";

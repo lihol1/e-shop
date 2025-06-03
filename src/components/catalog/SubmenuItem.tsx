@@ -1,4 +1,4 @@
-import { Category } from "../../utils/types";
+import { Category } from "../../common/types";
 
 type SubmenuItemProps = {
     category: Category;

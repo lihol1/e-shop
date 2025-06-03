@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Data, Product, ProductState, RequestParams } from "../utils/types";
+import { Data, Product, ProductState, RequestParams } from "../common/types";
 import * as productData from "../data.json";
-import { search } from "../utils/utilities";
+import { search } from "../common/utilities";
 
 const data = productData as unknown as Data;
 

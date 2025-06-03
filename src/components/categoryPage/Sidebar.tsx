@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Accordion from "react-bootstrap/Accordion";
 import Slider from "@mui/material/Slider";
 import { useAppSelector } from "../../hooks/hooks";
-import { FilterFeature } from "../../utils/types";
+import { FilterFeature } from "../../common/types";
 import { ru } from "../../aliases";
 import { setPriceValues, setRangeValues, setFeatureValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
 import { useDispatch } from "react-redux";

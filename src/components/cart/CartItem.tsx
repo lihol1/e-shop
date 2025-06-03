@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import { faRubleSign, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "../../hooks/hooks";
 import { addItemToCart, removeItemFromCart } from "../../store/cartSlice";
+import formatter from "../../common/formatter";
 
 type CartItemProps = {
     prod: Product;
 };
 
 const CartItem = ({ prod }: CartItemProps) => {
-    const formatter = new Intl.NumberFormat("ru");
     const dispatch = useAppDispatch();
 
     function changeQuantity(item: Product, quantity: number) {

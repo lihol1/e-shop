@@ -5,7 +5,7 @@ import { getCategories, setCategoryId, setCategoryName } from "../../store/categ
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import "../../styles/category.scss";
 import "../../styles/sidebar.scss";
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import Toast from "./ToastComponent";
 import Sidebar from "./Sidebar";
 import Pagination from "../pagination/Pagination";
@@ -13,7 +13,7 @@ import List from "../List";
 import CategoryPageItem from "./CategoryPageItem";
 import { setCurrentPage } from "../../store/generalSlice";
 import { setPriceValues, setRangeValues, setFilterFeatures, setSearchFilter } from "../../store/filterSlice";
-import { itemsPerPage } from "../../utils/constants";
+import { itemsPerPage } from "../../common/constants";
 
 export default function CategoryPage() {
     const { filteredByCategory, filteredByParams, maxPrice, requestParams } = useAppSelector((state) => state.products);

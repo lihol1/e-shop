@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Product } from "../../utils/types";
+import { Product } from "../../common/types";
 import SearchCategoryItem from "./SearchCategoryItem";
 import List from "../List";
 

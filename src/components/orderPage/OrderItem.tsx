@@ -1,15 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Order, Product } from "../../utils/types";
+import { Order, Product } from "../../common/types";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
-import formatter from '../../utils/formatter';
+import formatter from "../../common/formatter";
 
 type OrderItemProps = {
     product: Product;
     order: Order;
 };
 
-export default function OrderItem({ product, order }: OrderItemProps) {   
-
+export default function OrderItem({ product, order }: OrderItemProps) {
     return (
         <li key={product.id} className="orders__item">
             <div className="orders__left">

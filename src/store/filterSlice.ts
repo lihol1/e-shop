@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Feat, FilterFeature, FilterState } from "../utils/types";
+import { Feat, FilterFeature, FilterState } from "../common/types";
 
 const initialState: FilterState = {
     priceValues: [0, 0],

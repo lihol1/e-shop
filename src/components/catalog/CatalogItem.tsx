@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useAppDispatch } from "../../hooks/hooks";
-import { Category, CategoryGroup } from "../../utils/types";
+import { Category, CategoryGroup } from "../../common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { getCategoryGroups } from "../../store/categorySlice";

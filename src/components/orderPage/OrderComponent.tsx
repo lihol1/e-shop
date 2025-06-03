@@ -1,4 +1,4 @@
-import { Order } from "../../utils/types";
+import { Order } from "../../common/types";
 import OrderItem from "./OrderItem";
 
 type OrderComponentProps = {

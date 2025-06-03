@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { CategoriesState, PopularCategory, Product } from "../utils/types";
+import { CategoriesState, PopularCategory, Product } from "../common/types";
 import * as data from "../data.json";
 
 const initialState: CategoriesState = {

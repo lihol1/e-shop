@@ -1,4 +1,4 @@
-import { Aliases } from "./utils/types";
+import { Aliases } from "./common/types";
 
 export const ru: Aliases = {
     "screen size": "размер экрана",
