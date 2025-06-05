@@ -10,7 +10,7 @@ export default function HomePage() {
     useEffect(() => {
         dispatch(getProducts());
         dispatch(getCategories());
-    }, []);
+    }, [dispatch]);
 
     return <Categories />;
 }

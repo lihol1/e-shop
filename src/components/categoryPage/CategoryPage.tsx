@@ -13,7 +13,7 @@ import List from "../List";
 import CategoryPageItem from "./CategoryPageItem";
 import { setCurrentPage } from "../../store/generalSlice";
 import { setPriceValues, setRangeValues, setFilterFeatures, setSearchFilter } from "../../store/filterSlice";
-import { itemsPerPage } from "../../common/constants";
+import { ITEMS_PER_PAGE } from "../../common/constants";
 
 export default function CategoryPage() {
     const { filteredByCategory, filteredByParams, maxPrice, requestParams } = useAppSelector((state) => state.products);
@@ -26,12 +26,12 @@ export default function CategoryPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [list, setList] = useState<Product[] | null>([]);
 
-    const totalPages = list === null ? 1 : Math.ceil(list.length / itemsPerPage);
+    const totalPages = list === null ? 1 : Math.ceil(list.length / ITEMS_PER_PAGE);
 
     useEffect(() => {
         dispatch(getProducts());
         dispatch(getCategories());
-    }, []);
+    }, [dispatch]);
 
     function setCategoryData() {
         const catId = params.categoryId ? +params.categoryId : -1;
@@ -57,7 +57,7 @@ export default function CategoryPage() {
             dispatch(setCurrentPage(1));
         }
         setCategoryData();
-    }, [searchParams, params.categoryId]);
+    }, [dispatch, searchParams, params.categoryId]);
 
     useEffect(() => {
         setCategoryData();
@@ -73,13 +73,13 @@ export default function CategoryPage() {
             const filterObj = Object.fromEntries(Object.entries(filteredByCategory[0].features).map(([key]) => [key.toLowerCase(), true]));
             dispatch(setFilterFeatures(filterObj));
         }
-    }, [filteredByCategory]);
+    }, [dispatch, filteredByCategory]);
 
     useEffect(() => {
         if (filterFeatures) {
             dispatch(setSearchFilter({ ...searchFilter, ...filterFeatures }));
         }
-    }, [filterFeatures]);
+    }, [dispatch, filterFeatures]);
 
     useEffect(() => {
         if (filteredByCategory.length > 0 && requestParams.max > 0) {
@@ -95,32 +95,32 @@ export default function CategoryPage() {
                 max: priceValues[1],
             })
         );
-    }, [priceValues]);
+    }, [dispatch, priceValues]);
 
     useEffect(() => {
         dispatch(setRequestParams({ min: requestParams.min, max: requestParams.max, features: { ...featureValues } }));
-    }, [featureValues]);
+    }, [dispatch, featureValues]);
 
     useEffect(() => {
         dispatch(setPriceValues([0, maxPrice]));
         dispatch(setRangeValues([0, maxPrice]));
         dispatch(setRequestParams({ features: requestParams.features, min: requestParams.min, max: maxPrice }));
-    }, [maxPrice]);
+    }, [dispatch, maxPrice]);
 
     useEffect(() => {
         dispatch(setRangeValues(priceValues));
-    }, [priceValues]);
+    }, [dispatch, priceValues]);
 
     useEffect(() => {
         dispatch(filterByCategory(params.categoryId ?? ""));
     }, [dispatch, params.categoryId]);
 
     function paginate(arr: Product[]) {
-        if (arr.length <= itemsPerPage) {
+        if (arr.length <= ITEMS_PER_PAGE) {
             return arr;
         } else {
-            const endIndex = currentPage * itemsPerPage;
-            const startIndex = endIndex - itemsPerPage;
+            const endIndex = currentPage * ITEMS_PER_PAGE;
+            const startIndex = endIndex - ITEMS_PER_PAGE;
             return arr.slice(startIndex, endIndex);
         }
     }

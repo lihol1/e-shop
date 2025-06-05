@@ -12,33 +12,37 @@ import { useAppDispatch, useAppSelector } from "../hooks/hooks";
 import Catalog from "./catalog/Catalog";
 import { changeCartStatus } from "../store/cartSlice";
 import { setCatalogIsOpen, setHeaderSearchValue, setModalIsOpen } from "../store/generalSlice";
+import { useCallback } from "react";
 
 export default function Header() {
     const { catalogIsOpen, headerSearchValue } = useAppSelector((state) => state.general);
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
-    function searchHandler() {
+    const searchHandler = useCallback(() => {
         dispatch(searchProducts(headerSearchValue));
         navigate("/search");
-    }
+    }, [dispatch, navigate, searchProducts, headerSearchValue]);
 
-    function changeHandler(e: React.ChangeEvent<HTMLInputElement>) {
-        dispatch(setHeaderSearchValue(e.target.value));
-    }
+    const changeHandler = useCallback(
+        (e: React.ChangeEvent<HTMLInputElement>) => {
+            dispatch(setHeaderSearchValue(e.target.value));
+        },
+        [dispatch]
+    );
 
     function submit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         searchHandler();
     }
-    function clickHandler() {
+    const clickHandler = useCallback(() => {
         dispatch(setCatalogIsOpen(!catalogIsOpen));
-    }
+    }, [dispatch, setCatalogIsOpen, catalogIsOpen]);
 
-    function cartClickHandler() {
+    const cartClickHandler = useCallback(() => {
         dispatch(setModalIsOpen(true));
         dispatch(changeCartStatus(true));
-    }
+    }, [dispatch, setModalIsOpen, changeCartStatus]);
 
     return (
         <div className="page__header header">

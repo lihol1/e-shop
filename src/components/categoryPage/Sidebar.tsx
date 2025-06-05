@@ -9,6 +9,7 @@ import { ru } from "../../aliases";
 import { setPriceValues, setRangeValues, setFeatureValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
 import { useDispatch } from "react-redux";
 import AccordionElement from "./AccordionElement";
+import { useCallback } from "react";
 
 export default function Sidebar() {
     const { priceValues, rangeValues, featureValues, searchFilter, searchValue, emptyFilter } = useAppSelector((state) => state.filter);
@@ -20,10 +21,10 @@ export default function Sidebar() {
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         dispatch(setSearchValue(e.target.value));
     }
-    const handleRangeChange = (event: Event, newValue: number[]) => {
+    const handleRangeChange = useCallback((event: Event, newValue: number[]) => {
         dispatch(setRangeValues(newValue));
         dispatch(setPriceValues(newValue));
-    };
+    },[dispatch, setRangeValues, setPriceValues]);
 
     function handlePriceChange(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.name === "min_value") {
@@ -48,7 +49,7 @@ export default function Sidebar() {
         }
     }
 
-    function handleFeatureChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const handleFeatureChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.dataset.name) {
             if (e.target.checked) {
                 if (featureValues && e.target.dataset.name in featureValues) {
@@ -67,7 +68,7 @@ export default function Sidebar() {
                 }
             }
         }
-    }
+    },[dispatch, featureValues])
 
     function clearFilter() {
         const copy = Object.assign({}, searchFilter);

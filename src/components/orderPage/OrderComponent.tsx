@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Order } from "../../common/types";
 import OrderItem from "./OrderItem";
 
@@ -5,7 +6,7 @@ type OrderComponentProps = {
     order: Order;
 };
 
-export default function OrderComponent({ order }: OrderComponentProps) {
+const OrderComponent = memo(({ order }: OrderComponentProps) => {
     return (
         <li className="orders__list-item">
             <ul className="orders__items">
@@ -15,4 +16,6 @@ export default function OrderComponent({ order }: OrderComponentProps) {
             </ul>
         </li>
     );
-}
+});
+
+export default OrderComponent;

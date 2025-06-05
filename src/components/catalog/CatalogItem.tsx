@@ -6,12 +6,13 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { getCategoryGroups } from "../../store/categorySlice";
 import { useNavigate } from "react-router";
 import { setCatalogIsOpen, setSubmenuIsOpen, setCurrentProps } from "../../store/generalSlice";
+import { memo } from 'react';
 
 type CatalogListProps = {
     group: CategoryGroup;
 };
 
-export default function CatalogItem({ group }: CatalogListProps) {
+export default memo(function CatalogItem({ group }: CatalogListProps) {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
@@ -42,4 +43,4 @@ export default function CatalogItem({ group }: CatalogListProps) {
             </button>
         </>
     );
-}
+})

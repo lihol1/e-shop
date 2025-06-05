@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import Submenu from "./Submenu";
 import { useAppSelector } from "../../hooks/hooks";
@@ -26,17 +26,17 @@ export default function Catalog() {
         return () => {
             document.removeEventListener("click", checkIfClickedOutside);
         };
-    }, []);
+    }, [dispatch]);
 
-    function redirect(id: number) {
+    const redirect = useCallback((id: number) => {
         dispatch(setCatalogIsOpen(false));
         dispatch(setSubmenuIsOpen(false));
         navigate(`/category/${id}`);
-    }
+    },[dispatch, setCatalogIsOpen, setSubmenuIsOpen, navigate])
 
     useEffect(() => {
         dispatch(getCategoryGroups());
-    }, [currentProps]);
+    }, [dispatch, currentProps]);
 
     return (
         <>

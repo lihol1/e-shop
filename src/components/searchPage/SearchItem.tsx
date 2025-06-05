@@ -4,13 +4,14 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Product } from "../../common/types";
 import SearchCategoryItem from "./SearchCategoryItem";
 import List from "../List";
+import { memo } from "react";
 
 type SearchItemProps = {
     categoryName: string;
     arr: Product[];
 };
 
-export default function SearchItem({ categoryName, arr }: SearchItemProps) {
+const SearchItem = memo(({ categoryName, arr }: SearchItemProps) => {
     return (
         <li className="search__item-main">
             <div className="search__top">
@@ -23,4 +24,6 @@ export default function SearchItem({ categoryName, arr }: SearchItemProps) {
             <List items={arr} renderItem={(prod: Product) => <SearchCategoryItem prod={prod} />} className="search" />
         </li>
     );
-}
+})
+
+export default SearchItem;
