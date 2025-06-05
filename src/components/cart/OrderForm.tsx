@@ -84,7 +84,7 @@ export default function OrderForm() {
 
     useEffect(() => {
         dispatch(getTotal());
-    }, [orderedProducts]);
+    }, [dispatch, orderedProducts]);
 
     return (
         <>

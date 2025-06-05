@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Category } from "../../common/types";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
+import { memo } from "react";
 
 type CategoriesItemProps = {
     category: Category;
 };
 
-export default function CategoriesItem({ category }: CategoriesItemProps) {
+const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
     return (
         <Link to={`category/${category.id}`} className="categories__link">
             <div className="categories__image">
@@ -19,4 +20,6 @@ export default function CategoriesItem({ category }: CategoriesItemProps) {
             </div>
         </Link>
     );
-}
+})
+
+export default CategoriesItem;

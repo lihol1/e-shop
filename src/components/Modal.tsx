@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import Cart from "./cart/Cart";
 import "../styles/modal.scss";
 import CloseButton from "react-bootstrap/CloseButton";
@@ -27,12 +27,12 @@ export default function Modal() {
         };
     }, []);
 
-    function clickHandler() {
+    const clickHandler = useCallback(() => {
         dispatch(changeCartStatus(false));
         dispatch(setModalIsOpen(false));
         dispatch(setNoticeIsOpen(false));
         dispatch(setFormIsOpen(false));
-    }
+    }, [dispatch, changeCartStatus, setModalIsOpen, setNoticeIsOpen, setFormIsOpen]);
 
     return (
         <div ref={refModal} className="page__modal my-modal">

@@ -1,10 +1,12 @@
-type AccordionProps = {   
+import { memo } from 'react';
+
+type AccordionElementProps = {   
     feat: string;
     feature: string;
     handleFeatureChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export default function AccordionItem({ feat, feature, handleFeatureChange }: AccordionProps) {
+export default memo(function AccordionElement({ feat, feature, handleFeatureChange }: AccordionElementProps) {
     return (
         <div>
             <input type="checkbox" id={feature} name={feature} data-name={feat} onChange={handleFeatureChange} />
@@ -14,4 +16,4 @@ export default function AccordionItem({ feat, feature, handleFeatureChange }: Ac
             </label>
         </div>
     );
-}
+})

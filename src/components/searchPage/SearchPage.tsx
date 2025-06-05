@@ -11,7 +11,7 @@ export default function SearchPage() {
 
     useEffect(() => {
         dispatch(arrangeByCategories());
-    }, [foundProducts]);
+    }, [dispatch, foundProducts]);
 
     return (
         <div className="page__search search">
