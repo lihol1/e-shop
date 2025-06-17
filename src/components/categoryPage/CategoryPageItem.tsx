@@ -5,7 +5,8 @@ import { addItemToCart } from "../../store/cartSlice";
 import { setIsShown } from "../../store/generalSlice";
 import { useAppDispatch } from "../../hooks/hooks";
 import FeatureItem from "./FeatureItem";
-import { memo } from 'react';
+import { memo } from "react";
+import useAuth from "../../hooks/useAuth";
 
 type CategoryPageItemProps = {
     product: Product;
@@ -13,9 +14,13 @@ type CategoryPageItemProps = {
 
 export default memo(function CategoryPageItem({ product }: CategoryPageItemProps) {
     const dispatch = useAppDispatch();
+    const { isAuth } = useAuth();    
 
-    function addToCart(item: Product) {
-        dispatch(addItemToCart(item));
+    function addToCart(item: Product) {       
+        if (isAuth) {
+            dispatch(addItemToCart(item));
+            showToast();
+        }
         showToast();
     }
     function showToast() {
@@ -50,4 +55,4 @@ export default memo(function CategoryPageItem({ product }: CategoryPageItemProps
             </div>
         </>
     );
-})
+});

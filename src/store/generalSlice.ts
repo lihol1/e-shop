@@ -10,6 +10,7 @@ const initialState: GeneralState = {
     isShown: false,
     formIsOpen: false,
     modalIsOpen: false,
+    regFormIsOpen: false,
 };
 
 export const generalSlice = createSlice({
@@ -25,7 +26,7 @@ export const generalSlice = createSlice({
         setSubmenuIsOpen: (state, { payload }: PayloadAction<boolean>) => {
             state.submenuIsOpen = payload;
         },
-        setCurrentProps: (state, { payload }: PayloadAction<Iprops>) => {
+        setCurrentProps: (state, { payload }: PayloadAction<IProps>) => {
             state.currentProps = { title: payload.title, list: payload.list };
         },
         setHeaderSearchValue: (state, { payload }: PayloadAction<string>) => {
@@ -40,8 +41,11 @@ export const generalSlice = createSlice({
         setModalIsOpen: (state, { payload }: PayloadAction<boolean>) => {
             state.modalIsOpen = payload;
         },
+        setRegFormIsOpen: (state, { payload }: PayloadAction<boolean>) => {
+            state.regFormIsOpen = payload;
+        },
     },
 });
 
-export const { setCurrentPage, setCatalogIsOpen, setSubmenuIsOpen, setCurrentProps, setHeaderSearchValue, setIsShown, setFormIsOpen, setModalIsOpen } = generalSlice.actions;
+export const { setCurrentPage, setCatalogIsOpen, setSubmenuIsOpen, setCurrentProps, setHeaderSearchValue, setIsShown, setFormIsOpen, setModalIsOpen, setRegFormIsOpen } = generalSlice.actions;
 export default generalSlice.reducer;

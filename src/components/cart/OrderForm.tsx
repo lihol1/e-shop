@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from "react";
-import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router";
 import { formField, Order, Product } from "../../common/types";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { addOrder, formOrder } from "../../store/orderSlice";
-import { clearCart, setNoticeIsOpen, getTotal } from "../../store/cartSlice";
+import { clearCart, setNoticeIsOpen, getTotal, changeCartStatus } from "../../store/cartSlice";
 import { setCount } from "../../store/orderSlice";
 import { setFormIsOpen, setModalIsOpen } from "../../store/generalSlice";
 import MissingProdNotice from "./MissingProdNotice";
 import { getPopularCategories } from "../../store/categorySlice";
 import FormElement from "./FormElement";
 import List from "../List";
+import { unlockBody } from "../../common/utilities";
 
 const formFields: formField[] = [
     { name: "name", placeholder: "Имя", text: "Имя" },
@@ -24,6 +24,7 @@ const formFields: formField[] = [
 export default function OrderForm() {
     const { store, count } = useAppSelector((state) => state.order);
     const { orderedProducts, total, noticeIsOpen } = useAppSelector((state) => state.cart);
+    const { formIsOpen } = useAppSelector((state) => state.general);
 
     const [missedProducts, setMissedProducts] = useState<Product[]>([]);
 
@@ -77,6 +78,7 @@ export default function OrderForm() {
             dispatch(setModalIsOpen(false));
             dispatch(clearCart());
             navigate("/orders");
+            unlockBody();
         } else {
             dispatch(setNoticeIsOpen(true));
         }
@@ -86,11 +88,17 @@ export default function OrderForm() {
         dispatch(getTotal());
     }, [dispatch, orderedProducts]);
 
+    function cancel(){
+        dispatch(setFormIsOpen(false));
+        dispatch(changeCartStatus(true));
+    }
+
     return (
         <>
             {noticeIsOpen ? (
                 <MissingProdNotice missed={missedProducts} />
-            ) : (
+            ) : 
+            (formIsOpen && 
                 <div className="my-modal__order order">
                     <h2 className="order__title">Оформление заказа</h2>
                     <form ref={formRef} className="order__form form-order" onSubmit={handleSubmit}>
@@ -99,7 +107,8 @@ export default function OrderForm() {
                             <List items={formFields} renderItem={(field) => <FormElement name={field.name} placeholder={field.placeholder} text={field.text} />} className="form-order" />
                         </fieldset>
                         <div className="form-order__btn-block">
-                            <Button as="input" type="submit" value="Оформить заказ" variant="outline-primary" className="order__button" />
+                           <button className="my-modal__button my-modal__button--white" onClick={cancel}>Назад</button>
+                           <button className="my-modal__button my-modal__button--blue">Оформить заказ</button>
                         </div>
                     </form>
                 </div>

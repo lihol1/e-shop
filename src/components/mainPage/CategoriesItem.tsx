@@ -16,7 +16,7 @@ const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
             </div>
             <div className="categories__name-holder">
                 <h3 className="categories__name">{category.name[0].toUpperCase() + category.name.slice(1)}</h3>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon icon={faArrowRight} className="categories__arrow"/>
             </div>
         </Link>
     );

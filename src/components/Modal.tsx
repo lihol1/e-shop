@@ -1,17 +1,12 @@
-import { useCallback, useEffect, useRef } from "react";
-import Cart from "./cart/Cart";
+import { PropsWithChildren, useCallback, useEffect, useRef } from "react";
 import "../styles/modal.scss";
 import CloseButton from "react-bootstrap/CloseButton";
-import OrderForm from "./cart/OrderForm";
-import { useAppSelector } from "../hooks/hooks";
 import { changeCartStatus } from "../store/cartSlice";
 import { setNoticeIsOpen } from "../store/cartSlice";
 import { useDispatch } from "react-redux";
-import { setModalIsOpen, setFormIsOpen } from "../store/generalSlice";
+import { setModalIsOpen, setFormIsOpen, setRegFormIsOpen } from "../store/generalSlice";
 
-export default function Modal() {
-    const { cartIsOpen } = useAppSelector((state) => state.cart);
-    const { formIsOpen } = useAppSelector((state) => state.general);
+export default function Modal({ children }: PropsWithChildren) {
     const refModal = useRef(null);
     const dispatch = useDispatch();
 
@@ -32,7 +27,8 @@ export default function Modal() {
         dispatch(setModalIsOpen(false));
         dispatch(setNoticeIsOpen(false));
         dispatch(setFormIsOpen(false));
-    }, [dispatch, changeCartStatus, setModalIsOpen, setNoticeIsOpen, setFormIsOpen]);
+        dispatch(setRegFormIsOpen(false));
+    }, [dispatch, changeCartStatus, setModalIsOpen, setNoticeIsOpen, setFormIsOpen, setRegFormIsOpen]);
 
     return (
         <div ref={refModal} className="page__modal my-modal">
@@ -40,8 +36,7 @@ export default function Modal() {
                 <div className="my-modal__close">
                     <CloseButton onClick={clickHandler} />
                 </div>
-                {cartIsOpen && <Cart />}
-                {formIsOpen && <OrderForm />}
+                {children}
             </div>
         </div>
     );

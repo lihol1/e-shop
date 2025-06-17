@@ -1,16 +1,26 @@
 .search {
     &__list-main {
         padding: 20px 40px;
+        @media (max-width: 550px) {
+            padding: 15px 25px;
+        }
     }
     &__item-main {
         padding: 20px 0;
         border-bottom: 1px solid #999;
+        @media (max-width: 550px) {
+            padding: 0px;
+        }
     }
     &__top {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 40px;
+        @media (max-width: 550px) {
+            margin-bottom: 10px;
+        }
     }
     &__link {
         font-size: 14px;
@@ -29,24 +39,15 @@
     }
     &__category-name {
         font-size: 30px;
+        margin-right: 20px;
     }
-    // &__category-list {
-    //     padding: 20px 0;
-    //     display: grid;
-    //     grid-template-columns: repeat(auto-fill, 200px);
-    //     gap: 50px;
-    // }
-
-    // &__category-item {
-    //     display: grid;
-    //     grid-template-rows: 200px auto 40px;
-    // }
 
     &__list {
         padding: 20px 0;
         display: grid;
         grid-template-columns: repeat(auto-fill, 200px);
         gap: 50px;
+        justify-content: center;
     }
 
     &__item {

@@ -126,8 +126,8 @@ export default function CategoryPage() {
     }
 
     return (
-        <div className="page__wrapper">
-            <div className="page__category category">
+        <div className="page__category category">
+            <div className="category__wrapper">
                 <h3 className="category__title">
                     {categoryName.length > 0 && categoryName[0].toUpperCase() + categoryName.slice(1)} {list && <span className="category__amount">{list?.length} товаров</span>}
                 </h3>

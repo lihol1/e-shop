@@ -6,25 +6,27 @@ import Slider from "@mui/material/Slider";
 import { useAppSelector } from "../../hooks/hooks";
 import { FilterFeature } from "../../common/types";
 import { ru } from "../../aliases";
-import { setPriceValues, setRangeValues, setFeatureValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
+import { setPriceValues, setRangeValues, setSearchFilter, setSearchValue, setEmptyFilter } from "../../store/filterSlice";
 import { useDispatch } from "react-redux";
-import AccordionElement from "./AccordionElement";
 import { useCallback } from "react";
+import AccordionItem from "./AccordionItem";
 
 export default function Sidebar() {
-    const { priceValues, rangeValues, featureValues, searchFilter, searchValue, emptyFilter } = useAppSelector((state) => state.filter);
+    const { priceValues, rangeValues, searchFilter, searchValue, emptyFilter } = useAppSelector((state) => state.filter);
     const { filteredByCategory, maxPrice } = useAppSelector((state) => state.products);
     const dispatch = useDispatch();
-
-    const valuesArr: string[] = [];
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         dispatch(setSearchValue(e.target.value));
     }
-    const handleRangeChange = useCallback((event: Event, newValue: number[]) => {
-        dispatch(setRangeValues(newValue));
-        dispatch(setPriceValues(newValue));
-    },[dispatch, setRangeValues, setPriceValues]);
+
+    const handleRangeChange = useCallback(
+        (event: Event, newValue: number[]) => {
+            dispatch(setRangeValues(newValue));
+            dispatch(setPriceValues(newValue));
+        },
+        [dispatch, setRangeValues, setPriceValues]
+    );
 
     function handlePriceChange(e: React.ChangeEvent<HTMLInputElement>) {
         if (e.target.name === "min_value") {
@@ -48,27 +50,6 @@ export default function Sidebar() {
             );
         }
     }
-
-    const handleFeatureChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.dataset.name) {
-            if (e.target.checked) {
-                if (featureValues && e.target.dataset.name in featureValues) {
-                    dispatch(
-                        setFeatureValues({
-                            ...featureValues,
-                            [e.target.dataset.name]: featureValues[e.target.dataset.name].concat(e.target.name),
-                        })
-                    );
-                } else {
-                    dispatch(setFeatureValues({ ...featureValues, [e.target.dataset.name]: [e.target.name] }));
-                }
-            } else {
-                if (featureValues !== undefined) {
-                    dispatch(setFeatureValues({ ...featureValues, [e.target.dataset.name]: featureValues[e.target.dataset.name].filter((el) => el !== e.target.name) }));
-                }
-            }
-        }
-    },[dispatch, featureValues])
 
     function clearFilter() {
         const copy = Object.assign({}, searchFilter);
@@ -154,20 +135,7 @@ export default function Sidebar() {
                     <Accordion defaultActiveKey="0" alwaysOpen>
                         {Object.keys(filteredByCategory[0].features).map((feat, ind) => {
                             if (searchFilter[feat.toLowerCase()]) {
-                                return (
-                                    <Accordion.Item eventKey={String(ind)} key={ind} className="sidebar__acc-item">
-                                        <Accordion.Header className="sidebar__acc-header">{ru[feat][0].toUpperCase() + ru[feat].slice(1)}</Accordion.Header>
-                                        <Accordion.Body className="sidebar__acc-body">
-                                            {filteredByCategory.map((product, i) => {
-                                                if (!valuesArr.includes(product.features[feat])) {
-                                                    valuesArr.push(product.features[feat]);
-                                                    return <AccordionElement key={i} feat={feat} feature={product.features[feat]} handleFeatureChange={handleFeatureChange} />;
-                                                }
-                                                return;
-                                            })}
-                                        </Accordion.Body>
-                                    </Accordion.Item>
-                                );
+                                return <AccordionItem key={ind} feat={feat} ind={ind} />;
                             }
                         })}
                     </Accordion>

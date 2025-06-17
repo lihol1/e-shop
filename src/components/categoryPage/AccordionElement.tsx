@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { memo } from "react";
 
-type AccordionElementProps = {   
+type AccordionElementProps = {
     feat: string;
     feature: string;
     handleFeatureChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -16,4 +16,4 @@ export default memo(function AccordionElement({ feat, feature, handleFeatureChan
             </label>
         </div>
     );
-})
+});

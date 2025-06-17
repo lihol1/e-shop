@@ -62,6 +62,7 @@ export type GeneralState = {
     isShown: boolean;
     formIsOpen: boolean;
     modalIsOpen: boolean;
+    regFormIsOpen: boolean;   
 };
 
 export type FilterState = {
@@ -72,6 +73,19 @@ export type FilterState = {
     searchFilter: FilterFeature;
     searchValue: string,
     emptyFilter: boolean
+}
+
+export type UserState = {
+    currentUser: CurrentUser;   
+    formType: string;
+    error:string | null;
+    notificationIsOpen: boolean;
+    message: string;
+}
+export type CurrentUser = {
+    email: string | null;
+    token: string | null;
+    id: string | null;
 }
 
 export type CategoryGroup = {
@@ -128,3 +142,4 @@ type OrderValues = {
     orderTotal: number;
     products: Product[];
 };
+
