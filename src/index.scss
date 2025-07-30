@@ -1,4 +1,4 @@
-@import "./styles/reset.scss";
+@use "./styles/reset.scss";
 
 :root {
     --blue: #5378f1;
@@ -9,13 +9,21 @@
         background-color: var(--blue);
         border: 1px solid #fff;
         font-size: 20px;
+        line-height: 20px;
         &:hover {
             border: 1px solid #fff;
+        }
+        @media (max-width: 600px) {
+            & {
+                font-size: 16px;
+                line-height: 16px;
+            }
         }
     }
 }
 
 body {
+    position: relative;
     font-size: 18px;
     line-height: 1.1;
 }
@@ -24,10 +32,11 @@ body {
     min-height: 700px;
     max-width: 1400px;
     margin: 0 auto;
-    border: 1px solid #000;
     text-align: center;
 }
-.page__wrapper {
-    display: flex;
-    width: 100%;
+
+
+button:active {
+    position: relative;
+    top: 1px;
 }

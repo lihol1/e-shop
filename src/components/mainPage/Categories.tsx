@@ -12,7 +12,7 @@ export default function Categories() {
 
     useEffect(() => {
         dispatch(getTenPopularCategories());
-    }, [popularCategories]);
+    }, [dispatch, popularCategories]);
 
     return (
         <div className="page__categories categories">

@@ -11,7 +11,18 @@
         justify-items: center;
         gap: 20px;
         row-gap: 50px;
+        justify-content: center;
+        padding: 0 25px;
+        @media (max-width: 768px) {
+            & {
+                grid-template-columns: repeat(auto-fit, 140px);
+            }
+        }
+        @media (max-width: 400px) {
+            padding: 0 15px;
+        }
     }
+
     &__image {
         position: relative;
         width: 100%;
@@ -21,12 +32,17 @@
     &__item {
         display: flex;
         flex-direction: column;
-        padding: 15px;
         width: 200px;
         height: 190px;
+        border-radius: 4px;
         box-shadow: 0px 3px 20px 2px #999;
+        transition: box-shadow 0.2s ease;
         &:hover {
             box-shadow: 0px 3px 20px 2px #707070;
+        }
+        @media (max-width: 768px) {
+            width: 140px;
+            height: auto;
         }
 
         article {
@@ -42,6 +58,11 @@
             object-fit: contain;
         }
     }
+    &__link {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+    }
 
     &__name-holder {
         display: flex;
@@ -52,5 +73,13 @@
         font-size: 18px;
         margin-right: 10px;
         margin-bottom: 0;
+        @media (max-width: 768px) {
+            & {
+                font-size: 13px;
+            }
+        }
+    }
+    &__arrow {
+        font-size: 14px;
     }
 }

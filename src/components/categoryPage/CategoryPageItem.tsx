@@ -1,22 +1,26 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { Product } from "../../common/types";
 import { faCartShopping, faRubleSign } from "@fortawesome/free-solid-svg-icons";
 import { addItemToCart } from "../../store/cartSlice";
 import { setIsShown } from "../../store/generalSlice";
 import { useAppDispatch } from "../../hooks/hooks";
-import List from "../List";
 import FeatureItem from "./FeatureItem";
+import { memo } from "react";
+import useAuth from "../../hooks/useAuth";
 
 type CategoryPageItemProps = {
     product: Product;
 };
 
-export default function CategoryPageItem({ product }: CategoryPageItemProps) {
+export default memo(function CategoryPageItem({ product }: CategoryPageItemProps) {
     const dispatch = useAppDispatch();
+    const { isAuth } = useAuth();    
 
-    function addToCart(item: Product) {
-        dispatch(addItemToCart(item));
+    function addToCart(item: Product) {       
+        if (isAuth) {
+            dispatch(addItemToCart(item));
+            showToast();
+        }
         showToast();
     }
     function showToast() {
@@ -51,4 +55,4 @@ export default function CategoryPageItem({ product }: CategoryPageItemProps) {
             </div>
         </>
     );
-}
+});

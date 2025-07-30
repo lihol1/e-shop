@@ -1,10 +1,11 @@
 import { Product } from "../../common/types";
+import { memo } from 'react';
 
 type NoticeItemProps = {
     product: Product;
 };
 
-export default function NoticeItem({ product }: NoticeItemProps) {
+const NoticeItem = memo(({ product }: NoticeItemProps)=> {
     return (
         <>
             <div className="notice__left">
@@ -18,4 +19,6 @@ export default function NoticeItem({ product }: NoticeItemProps) {
             </div>
         </>
     );
-}
+})
+
+export default  NoticeItem;

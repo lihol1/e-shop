@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Order, Product } from "../../common/types";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
 import formatter from "../../common/formatter";
+import { memo } from "react";
 
 type OrderItemProps = {
     product: Product;
     order: Order;
 };
 
-export default function OrderItem({ product, order }: OrderItemProps) {
+const OrderItem = memo(({ product, order }: OrderItemProps) => {
     return (
         <li key={product.id} className="orders__item">
             <div className="orders__left">
@@ -31,4 +32,6 @@ export default function OrderItem({ product, order }: OrderItemProps) {
             </div>
         </li>
     );
-}
+})
+
+export default OrderItem;

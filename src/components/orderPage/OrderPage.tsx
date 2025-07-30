@@ -8,7 +8,7 @@ export default function OrderPage() {
 
     return (
         <div className="page__orders orders">
-            <h3>Заказы</h3>
+            <h3 className="orders__title">Заказы</h3>
             <div className="orders__link">
                 <Link to="/">на главную страницу</Link>
             </div>

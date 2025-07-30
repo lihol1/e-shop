@@ -2,12 +2,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Category } from "../../common/types";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router";
+import { memo } from "react";
 
 type CategoriesItemProps = {
     category: Category;
 };
 
-export default function CategoriesItem({ category }: CategoriesItemProps) {
+const CategoriesItem = memo(({ category }: CategoriesItemProps) => {
     return (
         <Link to={`category/${category.id}`} className="categories__link">
             <div className="categories__image">
@@ -15,8 +16,10 @@ export default function CategoriesItem({ category }: CategoriesItemProps) {
             </div>
             <div className="categories__name-holder">
                 <h3 className="categories__name">{category.name[0].toUpperCase() + category.name.slice(1)}</h3>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon icon={faArrowRight} className="categories__arrow"/>
             </div>
         </Link>
     );
-}
+})
+
+export default CategoriesItem;

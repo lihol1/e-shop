@@ -4,12 +4,13 @@ import { faRubleSign, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "../../hooks/hooks";
 import { addItemToCart, removeItemFromCart } from "../../store/cartSlice";
 import formatter from "../../common/formatter";
+import { memo } from 'react';
 
 type CartItemProps = {
     prod: Product;
 };
 
-const CartItem = ({ prod }: CartItemProps) => {
+const CartItem = memo(({ prod }: CartItemProps) => {
     const dispatch = useAppDispatch();
 
     function changeQuantity(item: Product, quantity: number) {
@@ -51,6 +52,6 @@ const CartItem = ({ prod }: CartItemProps) => {
             </div>
         </>
     );
-};
+});
 
 export default CartItem;

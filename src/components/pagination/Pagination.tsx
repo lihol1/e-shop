@@ -3,6 +3,7 @@ import List from "../List";
 import PaginationButton from "./PaginationButton";
 import { useAppDispatch } from "../../hooks/hooks";
 import { setCurrentPage } from "../../store/generalSlice";
+import { useCallback } from "react";
 
 type PaginationProps = {
     totalPages: number;   
@@ -13,10 +14,10 @@ function Pagination({ totalPages }: PaginationProps) {
     const dispatch = useAppDispatch();
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const handlePageChange = (newPage: number) => {
+    const handlePageChange = useCallback((newPage: number) => {
         dispatch(setCurrentPage(newPage))    
         setSearchParams({ page: String(newPage) });
-    };
+    },[dispatch, setCurrentPage, setSearchParams]);
 
     return (
         <div className="category__pagination pagination">

@@ -1,10 +1,12 @@
+import { memo } from "react";
+
 type FormElementProps = {
     name: string;
     placeholder: string;
     text: string;
 };
 
-export default function FormElement({ name, placeholder, text }: FormElementProps) {
+const FormElement = memo(({ name, placeholder, text }: FormElementProps) => {
     return (
         <>
             <label htmlFor={name} className="form-order__label">
@@ -14,4 +16,6 @@ export default function FormElement({ name, placeholder, text }: FormElementProp
             <input type="text" id={name} name={name} placeholder={placeholder} />
         </>
     );
-}
+});
+
+export default FormElement;

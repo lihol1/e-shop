@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 import Submenu from "./Submenu";
 import { useAppSelector } from "../../hooks/hooks";
@@ -7,6 +7,7 @@ import CatalogItem from "./CatalogItem";
 import { useDispatch } from "react-redux";
 import { getCategoryGroups } from "../../store/categorySlice";
 import { setCatalogIsOpen, setSubmenuIsOpen } from "../../store/generalSlice";
+import { CloseButton } from "react-bootstrap";
 
 export default function Catalog() {
     const { categoryGroups } = useAppSelector((state) => state.categories);
@@ -26,23 +27,28 @@ export default function Catalog() {
         return () => {
             document.removeEventListener("click", checkIfClickedOutside);
         };
-    }, []);
+    }, [dispatch]);
 
-    function redirect(id: number) {
+    const redirect = useCallback((id: number) => {
         dispatch(setCatalogIsOpen(false));
         dispatch(setSubmenuIsOpen(false));
         navigate(`/category/${id}`);
-    }
+    },[dispatch, setCatalogIsOpen, setSubmenuIsOpen, navigate])
 
     useEffect(() => {
         dispatch(getCategoryGroups());
-    }, [currentProps]);
+    }, [dispatch, currentProps]);
+
+    function clickHandler(){
+        dispatch(setCatalogIsOpen(false));
+    }
 
     return (
         <>
             {catalogIsOpen && (
                 <div className="header__catalog-wrapper" ref={ref}>
                     <aside className="header__catalog catalog">
+                        <CloseButton onClick={clickHandler} className="catalog__close" />
                         <h2 className="catalog__title">Каталог</h2>
                         <nav className="catalog__nav">{categoryGroups.length > 0 && <List items={categoryGroups} renderItem={(group) => <CatalogItem group={group} />} className="catalog" />}</nav>
                         {submenuIsOpen && <Submenu redirect={redirect} />}

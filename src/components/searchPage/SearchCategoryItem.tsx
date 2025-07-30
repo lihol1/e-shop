@@ -1,12 +1,13 @@
 import { Product } from "../../common/types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRubleSign } from "@fortawesome/free-solid-svg-icons";
+import { memo } from "react";
 
 type SearchCategoryItemProps = {
     prod: Product;
 };
 
-export default function SearchCategoryItem({ prod }: SearchCategoryItemProps) {
+const SearchCategoryItem = memo(({ prod }: SearchCategoryItemProps) => {
     return (
         <>
             <div className="search__image">
@@ -19,4 +20,6 @@ export default function SearchCategoryItem({ prod }: SearchCategoryItemProps) {
             </div>
         </>
     );
-}
+});
+
+export default SearchCategoryItem;
